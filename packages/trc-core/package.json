@@ -1,0 +1,40 @@
+{
+  "name": "@trainer-road/trc-core",
+  "version": "0.1.0",
+  "description": "TrainerRoad's component library (core)",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "build:types": "tsc --emitDeclarationOnly",
+    "watch:main": "rollup -c --watch",
+    "watch:types": "tsc -w --emitDeclarationOnly",
+    "watch": "concurrently --kill-others \"yarn run watch:main\" \"yarn run watch:types\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-typescript": "^7.3.3",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
+    "chokidar": "^2.1.5",
+    "concurrently": "^4.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.0",
+    "jest": "^24.7.1",
+    "plop": "^2.3.0",
+    "ramda": "^0.26.1",
+    "rollup": "^1.10.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-copy": "^1.1.0",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}

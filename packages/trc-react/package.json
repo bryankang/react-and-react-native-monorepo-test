@@ -1,0 +1,49 @@
+{
+  "name": "@trainer-road/trc-react",
+  "version": "0.1.0",
+  "description": "TrainerRoad's design system (React)",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 6001 --ci"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@emotion/babel-preset-css-prop": "^10.0.9",
+    "@emotion/core": "^10.0.10",
+    "@storybook/addon-actions": "^5.0.10",
+    "@storybook/addon-info": "^5.0.10",
+    "@storybook/addon-knobs": "^5.0.10",
+    "@storybook/addon-storysource": "^5.0.10",
+    "@storybook/addon-viewport": "^5.0.10",
+    "@storybook/react": "^5.0.10",
+    "@trainer-road/trc-core": "0.1.0",
+    "@types/ramda": "types/npm-ramda#dist",
+    "@types/react": "^16.8.12",
+    "@types/react-dom": "^16.8.3",
+    "@types/storybook__addon-actions": "^3.4.2",
+    "@types/storybook__addon-info": "^4.1.1",
+    "@types/storybook__addon-knobs": "^4.0.5",
+    "@types/storybook__addon-storyshots": "^3.4.8",
+    "@types/storybook__react": "^4.0.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-ramda": "^2.0.0",
+    "emotion-theming": "^10.0.10",
+    "react": "^16.8.6",
+    "react-docgen-typescript-loader": "^3.1.0",
+    "react-dom": "^16.8.6",
+    "typescript": "^3.4.4",
+    "webpack": "^4.29.6"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
+  }
+}
