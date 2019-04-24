@@ -7,7 +7,7 @@ export function ThemeProvider(props: any) {
     <ThemeContext.Provider value={props.theme}>
       {props.children}
     </ThemeContext.Provider>
-  )
+  );
 }
 
 export const useTheme = () => useContext(ThemeContext);

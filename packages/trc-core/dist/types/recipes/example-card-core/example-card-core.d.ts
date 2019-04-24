@@ -1,5 +1,5 @@
-declare function formatHoursAndMinutes(ms: number): any;
-declare function formatSeconds(ms: number): any;
+declare function formatHoursAndMinutes(ms: number): string;
+declare function formatSeconds(ms: number): string;
 export declare const exampleCardCore: {
     formatHoursAndMinutes: typeof formatHoursAndMinutes;
     formatSeconds: typeof formatSeconds;

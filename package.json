@@ -8,8 +8,6 @@
     "nohoist": [
       "**/react-native",
       "**/react-native/**",
-      "**/@storybook/react-native",
-      "**/@storybook/react-native/**",
       "**/@storybook*",
       "**/@storybook*/**"
     ]

@@ -17,69 +17,21 @@ const emphasisOnDark = {
 }
 
 export const colors = {
-    primary: {
-        backgroundColor: colorPalette.red2,
-        color: colorPalette.white,
-        emphasis: {
-            lowest: 0.1,
-            low: .3,
-            medium: .5,
-            high: .8,
-            highest: 1,
-        },
-    },
-    danger: {
-        backgroundColor: colorPalette.red2,
-        color: colorPalette.white,
-        emphasis: {
-            lowest: 0.1,
-            low: .3,
-            medium: .5,
-            high: .8,
-            highest: 1,
-        },
-    },
     background1: {
         backgroundColor: colorPalette.red2,
         color: colorPalette.white,
-        emphasis: {
-            lowest: 0.1,
-            low: .3,
-            medium: .5,
-            high: .8,
-            highest: 1,
-        },
+        emphasis: emphasisOnDark,
     },
     background2: {
         backgroundColor: colorPalette.red2,
         color: colorPalette.white,
-        emphasis: {
-            lowest: 0.1,
-            low: .3,
-            medium: .5,
-            high: .8,
-            highest: 1,
-        },
+        emphasis: emphasisOnDark,
     },
     background3: {
         backgroundColor: colorPalette.red2,
         color: colorPalette.white,
-        emphasis: {
-            lowest: 0.1,
-            low: .3,
-            medium: .5,
-            high: .8,
-            highest: 1,
-        },
+        emphasis: emphasisOnDark,
     },
-
-    error: colorPalette.error,
-    onError: colorPalette.white,
-    background: colorPalette.grey2,
-    onBackground: colorPalette.white,
-    surface: colorPalette.grey3,
-    onSurface: colorPalette.grey11,
-
 
 
 

@@ -1,9 +1,9 @@
 import R from 'ramda';
 import React from 'react';
-import { View, SafeAreaView } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { select } from '@storybook/addon-knobs';
 import { StatusBar } from '../src/components/status-bar/status-bar';
-import { ThemeProvider } from '../src/hooks/useTheme';
+import { ThemeProvider } from '../src/utils/use-theme';
 
 const light = {name: 'light'}
 const dark = {name: 'dark'}
@@ -18,6 +18,14 @@ const selectOptions = themes.reduce((acc: any, value) => {
   return acc;
 }, {});
 
+const styles = StyleSheet.create({
+  root: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
 export function withRoot(storyFn: any): React.ReactElement {
   const themeName = select('theme', selectOptions, 'light');
   const theme = R.find(R.propEq('name', themeName), themes);
@@ -25,9 +33,7 @@ export function withRoot(storyFn: any): React.ReactElement {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar/>
-      <View style={{
-        flex: 1,
-        backgroundColor: 'lightblue'}}>
+      <View style={styles.root}>
         {storyFn()}
       </View>
     </ThemeProvider>
