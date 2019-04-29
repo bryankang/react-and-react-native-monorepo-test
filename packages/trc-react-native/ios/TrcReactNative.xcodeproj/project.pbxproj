@@ -13,6 +13,7 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* TrcReactNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TrcReactNativeTests.m */; };
+		0C7F0C93F3B74208B16D1F81 /* ProximaNova-ExtrabldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 40F3207DEA514F78A8C10914 /* ProximaNova-ExtrabldIt.otf */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -36,10 +37,26 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* TrcReactNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TrcReactNativeTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
+		347E59EBEAE04A7BAF9BCB45 /* ProximaNova-BlackIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = B7E3D6AACD204A118B376A9F /* ProximaNova-BlackIt.otf */; };
+		40C231BFE56D4B6EB783DD16 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7228122A7BD948DEA076A186 /* ProximaNova-Light.otf */; };
+		4736B917111D4D45BAE1429E /* ProximaNova-MediumIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 09311E8C12804710B29E56D4 /* ProximaNova-MediumIt.otf */; };
+		6220B7F54879436980A7795F /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1BAE62AE724849C39E855677 /* ProximaNova-Black.otf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		894223CC720E4AB0A438CDBA /* ProximaNova-ThinIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = D9120D8FFA024E008CBD1D93 /* ProximaNova-ThinIt.otf */; };
+		A435EF3ADD8E4041895289F3 /* ProximaNova-LightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 400E4F1BB47943FDA3352DED /* ProximaNova-LightIt.otf */; };
+		A50CA0F259D7476C8DD47F69 /* tr-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D19603F1E244B21B485D6B4 /* tr-icons.ttf */; };
+		A9F217C1DED94DADB6DA6CA1 /* ProximaNova-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 97C62DE81EEB426589E3361E /* ProximaNova-BoldIt.otf */; };
+		AD2CDFA801A34BEC8DFC6CD5 /* ProximaNovaT-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 17F6ECE031574A37AA914D6D /* ProximaNovaT-Thin.otf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		B7C8CFE3EBCF462098FAD2F2 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C6A46E589E24B91AE70445B /* ProximaNova-Regular.otf */; };
+		C29E463A72484FBBB141C6F0 /* ProximaNova-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8B39D79118804A63841BF400 /* ProximaNova-Medium.otf */; };
+		C33152A26109449F9151CBC3 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 40258FA5EA264F97A00A7F5A /* ProximaNova-Bold.otf */; };
+		CDCD5E95701547BDB567BD3F /* ProximaNova-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3149611D3FBD4ACEBEAFEBA0 /* ProximaNova-SemiboldIt.otf */; };
+		E8E10A55528C4CED82DBBABE /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6D4BF671F0D34B75895257A6 /* ProximaNova-Semibold.otf */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
+		F3D6F53DB60A49F58D97C03D /* ProximaNova-RegularIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0B3B0A29E0D4ADB9F2DA2B6 /* ProximaNova-RegularIt.otf */; };
+		F5C94838D805411DBC1C8651 /* ProximaNova-Extrabld.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7CD79F1CAFD5441486F3C033 /* ProximaNova-Extrabld.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,28 +298,28 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
-		93CD3DA4226EEA6F0037EE21 /* PBXContainerItemProxy */ = {
+		932C2E5722772C6A0038547C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EDEBC6D6214B3E7000DD5AC8;
 			remoteInfo = jsi;
 		};
-		93CD3DA6226EEA6F0037EE21 /* PBXContainerItemProxy */ = {
+		932C2E5922772C6A0038547C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EDEBC73B214B45A300DD5AC8;
 			remoteInfo = jsiexecutor;
 		};
-		93CD3DA8226EEA6F0037EE21 /* PBXContainerItemProxy */ = {
+		932C2E5B22772C6A0038547C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ED296FB6214C9A0900B7C4FE;
 			remoteInfo = "jsi-tvOS";
 		};
-		93CD3DAA226EEA6F0037EE21 /* PBXContainerItemProxy */ = {
+		932C2E5D22772C6A0038547C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
@@ -328,6 +345,7 @@
 		00E356EE1AD99517003FC87E /* TrcReactNativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrcReactNativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* TrcReactNativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrcReactNativeTests.m; sourceTree = "<group>"; };
+		09311E8C12804710B29E56D4 /* ProximaNova-MediumIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-MediumIt.otf"; path = "../assets/fonts/ProximaNova-MediumIt.otf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TrcReactNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrcReactNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,13 +356,29 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TrcReactNative/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TrcReactNative/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		17F6ECE031574A37AA914D6D /* ProximaNovaT-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNovaT-Thin.otf"; path = "../assets/fonts/ProximaNovaT-Thin.otf"; sourceTree = "<group>"; };
+		1BAE62AE724849C39E855677 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Black.otf"; path = "../assets/fonts/ProximaNova-Black.otf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* TrcReactNative-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TrcReactNative-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* TrcReactNative-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TrcReactNative-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3149611D3FBD4ACEBEAFEBA0 /* ProximaNova-SemiboldIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-SemiboldIt.otf"; path = "../assets/fonts/ProximaNova-SemiboldIt.otf"; sourceTree = "<group>"; };
+		400E4F1BB47943FDA3352DED /* ProximaNova-LightIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-LightIt.otf"; path = "../assets/fonts/ProximaNova-LightIt.otf"; sourceTree = "<group>"; };
+		40258FA5EA264F97A00A7F5A /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Bold.otf"; path = "../assets/fonts/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		40F3207DEA514F78A8C10914 /* ProximaNova-ExtrabldIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-ExtrabldIt.otf"; path = "../assets/fonts/ProximaNova-ExtrabldIt.otf"; sourceTree = "<group>"; };
+		5D19603F1E244B21B485D6B4 /* tr-icons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "tr-icons.ttf"; path = "../assets/fonts/tr-icons.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6D4BF671F0D34B75895257A6 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Semibold.otf"; path = "../assets/fonts/ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		7228122A7BD948DEA076A186 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Light.otf"; path = "../assets/fonts/ProximaNova-Light.otf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		7CD79F1CAFD5441486F3C033 /* ProximaNova-Extrabld.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Extrabld.otf"; path = "../assets/fonts/ProximaNova-Extrabld.otf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8B39D79118804A63841BF400 /* ProximaNova-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Medium.otf"; path = "../assets/fonts/ProximaNova-Medium.otf"; sourceTree = "<group>"; };
+		97C62DE81EEB426589E3361E /* ProximaNova-BoldIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-BoldIt.otf"; path = "../assets/fonts/ProximaNova-BoldIt.otf"; sourceTree = "<group>"; };
+		9C6A46E589E24B91AE70445B /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Regular.otf"; path = "../assets/fonts/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		B0B3B0A29E0D4ADB9F2DA2B6 /* ProximaNova-RegularIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-RegularIt.otf"; path = "../assets/fonts/ProximaNova-RegularIt.otf"; sourceTree = "<group>"; };
+		B7E3D6AACD204A118B376A9F /* ProximaNova-BlackIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-BlackIt.otf"; path = "../assets/fonts/ProximaNova-BlackIt.otf"; sourceTree = "<group>"; };
+		D9120D8FFA024E008CBD1D93 /* ProximaNova-ThinIt.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-ThinIt.otf"; path = "../assets/fonts/ProximaNova-ThinIt.otf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -513,10 +547,10 @@
 				2DF0FFE52056DD460020B375 /* libthird-party.a */,
 				2DF0FFE72056DD460020B375 /* libdouble-conversion.a */,
 				2DF0FFE92056DD460020B375 /* libdouble-conversion.a */,
-				93CD3DA5226EEA6F0037EE21 /* libjsi.a */,
-				93CD3DA7226EEA6F0037EE21 /* libjsiexecutor.a */,
-				93CD3DA9226EEA6F0037EE21 /* libjsi-tvOS.a */,
-				93CD3DAB226EEA6F0037EE21 /* libjsiexecutor-tvOS.a */,
+				932C2E5822772C6A0038547C /* libjsi.a */,
+				932C2E5A22772C6A0038547C /* libjsiexecutor.a */,
+				932C2E5C22772C6A0038547C /* libjsi-tvOS.a */,
+				932C2E5E22772C6A0038547C /* libjsiexecutor-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -585,6 +619,7 @@
 				00E356EF1AD99517003FC87E /* TrcReactNativeTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				D79E2688D15548BF9C3240B6 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -609,6 +644,30 @@
 				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D79E2688D15548BF9C3240B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BAE62AE724849C39E855677 /* ProximaNova-Black.otf */,
+				B7E3D6AACD204A118B376A9F /* ProximaNova-BlackIt.otf */,
+				40258FA5EA264F97A00A7F5A /* ProximaNova-Bold.otf */,
+				97C62DE81EEB426589E3361E /* ProximaNova-BoldIt.otf */,
+				7CD79F1CAFD5441486F3C033 /* ProximaNova-Extrabld.otf */,
+				40F3207DEA514F78A8C10914 /* ProximaNova-ExtrabldIt.otf */,
+				7228122A7BD948DEA076A186 /* ProximaNova-Light.otf */,
+				400E4F1BB47943FDA3352DED /* ProximaNova-LightIt.otf */,
+				8B39D79118804A63841BF400 /* ProximaNova-Medium.otf */,
+				09311E8C12804710B29E56D4 /* ProximaNova-MediumIt.otf */,
+				B0B3B0A29E0D4ADB9F2DA2B6 /* ProximaNova-RegularIt.otf */,
+				6D4BF671F0D34B75895257A6 /* ProximaNova-Semibold.otf */,
+				3149611D3FBD4ACEBEAFEBA0 /* ProximaNova-SemiboldIt.otf */,
+				D9120D8FFA024E008CBD1D93 /* ProximaNova-ThinIt.otf */,
+				17F6ECE031574A37AA914D6D /* ProximaNovaT-Thin.otf */,
+				5D19603F1E244B21B485D6B4 /* tr-icons.ttf */,
+				9C6A46E589E24B91AE70445B /* ProximaNova-Regular.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -692,7 +751,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -715,6 +774,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1006,32 +1066,32 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		93CD3DA5226EEA6F0037EE21 /* libjsi.a */ = {
+		932C2E5822772C6A0038547C /* libjsi.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libjsi.a;
-			remoteRef = 93CD3DA4226EEA6F0037EE21 /* PBXContainerItemProxy */;
+			remoteRef = 932C2E5722772C6A0038547C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		93CD3DA7226EEA6F0037EE21 /* libjsiexecutor.a */ = {
+		932C2E5A22772C6A0038547C /* libjsiexecutor.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libjsiexecutor.a;
-			remoteRef = 93CD3DA6226EEA6F0037EE21 /* PBXContainerItemProxy */;
+			remoteRef = 932C2E5922772C6A0038547C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		93CD3DA9226EEA6F0037EE21 /* libjsi-tvOS.a */ = {
+		932C2E5C22772C6A0038547C /* libjsi-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libjsi-tvOS.a";
-			remoteRef = 93CD3DA8226EEA6F0037EE21 /* PBXContainerItemProxy */;
+			remoteRef = 932C2E5B22772C6A0038547C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		93CD3DAB226EEA6F0037EE21 /* libjsiexecutor-tvOS.a */ = {
+		932C2E5E22772C6A0038547C /* libjsiexecutor-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libjsiexecutor-tvOS.a";
-			remoteRef = 93CD3DAA226EEA6F0037EE21 /* PBXContainerItemProxy */;
+			remoteRef = 932C2E5D22772C6A0038547C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */ = {
@@ -1057,6 +1117,23 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				6220B7F54879436980A7795F /* ProximaNova-Black.otf in Resources */,
+				347E59EBEAE04A7BAF9BCB45 /* ProximaNova-BlackIt.otf in Resources */,
+				C33152A26109449F9151CBC3 /* ProximaNova-Bold.otf in Resources */,
+				A9F217C1DED94DADB6DA6CA1 /* ProximaNova-BoldIt.otf in Resources */,
+				F5C94838D805411DBC1C8651 /* ProximaNova-Extrabld.otf in Resources */,
+				0C7F0C93F3B74208B16D1F81 /* ProximaNova-ExtrabldIt.otf in Resources */,
+				40C231BFE56D4B6EB783DD16 /* ProximaNova-Light.otf in Resources */,
+				A435EF3ADD8E4041895289F3 /* ProximaNova-LightIt.otf in Resources */,
+				C29E463A72484FBBB141C6F0 /* ProximaNova-Medium.otf in Resources */,
+				4736B917111D4D45BAE1429E /* ProximaNova-MediumIt.otf in Resources */,
+				F3D6F53DB60A49F58D97C03D /* ProximaNova-RegularIt.otf in Resources */,
+				E8E10A55528C4CED82DBBABE /* ProximaNova-Semibold.otf in Resources */,
+				CDCD5E95701547BDB567BD3F /* ProximaNova-SemiboldIt.otf in Resources */,
+				894223CC720E4AB0A438CDBA /* ProximaNova-ThinIt.otf in Resources */,
+				AD2CDFA801A34BEC8DFC6CD5 /* ProximaNovaT-Thin.otf in Resources */,
+				A50CA0F259D7476C8DD47F69 /* tr-icons.ttf in Resources */,
+				B7C8CFE3EBCF462098FAD2F2 /* ProximaNova-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1225,7 +1302,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TrcReactNative;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1244,7 +1320,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TrcReactNative;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

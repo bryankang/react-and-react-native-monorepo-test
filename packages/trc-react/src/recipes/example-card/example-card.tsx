@@ -3,7 +3,7 @@ import { getExampleCardStyles } from "./get-example-card-styles";
 import { useTheme } from '../../hooks/useTheme';
 import { Card } from '../../components/card/card';
 import { Button } from '../../components/button/button';
-import { exampleCardCore } from '@trainer-road/trc-core';
+import { exampleCardCore } from '@trainerroad/trc-core';
 
 export interface ExampleCardProps {
     /** label to use for the confirmation button */

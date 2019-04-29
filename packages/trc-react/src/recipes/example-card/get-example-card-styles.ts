@@ -1,7 +1,7 @@
 import R from 'ramda';
 import { css } from '@emotion/core';
 import { SerializedStyles } from '@emotion/serialize';
-import { Theme, lightTheme } from '@trainer-road/trc-core';
+import { Theme, lightTheme } from '@trainerroad/trc-core';
 import { ExampleCardProps } from './example-card';
 
 export const getExampleCardStyles = (args: { theme: Partial<Theme>, props: ExampleCardProps }) => {

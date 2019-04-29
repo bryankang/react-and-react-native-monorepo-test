@@ -56,7 +56,7 @@ export const typography = {
         fontFamily: primarySansSerifFontFamily,
         fontSize: 20,
         lineHeight: 32,
-        fontWeight: 500,
+        fontWeight: 600,
         letterSpacing: 0.25,
         textDecoration: "none",
         textTransform: "none",
@@ -76,7 +76,7 @@ export const typography = {
         fontFamily: primarySansSerifFontFamily,
         fontSize: 14,
         lineHeight: 22,
-        fontWeight: 500,
+        fontWeight: 600,
         letterSpacing: 0.1,
         textDecoration: "none",
         textTransform: "none",
@@ -116,13 +116,13 @@ export const typography = {
         fontFamily: primarySansSerifFontFamily,
         fontSize: 14,
         lineHeight: 36,
-        fontWeight: 500,
+        fontWeight: 600,
         letterSpacing: 1,
         textDecoration: "none",
         textTransform: "capitalize",
     },
 
-    caption1: {
+    caption: {
         fontFamily: primarySansSerifFontFamily,
         fontSize: 12,
         lineHeight: 20,
@@ -132,17 +132,7 @@ export const typography = {
         textTransform: "none",
     },
 
-    caption2: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 12,
-        lineHeight: 20,
-        fontWeight: 400,
-        letterSpacing: 0.4,
-        textDecoration: "none",
-        textTransform: "none",
-    },
-
-    overline1: {
+    overline: {
         fontFamily: primarySansSerifFontFamily,
         fontSize: 12,
         lineHeight: 32,
@@ -150,15 +140,5 @@ export const typography = {
         letterSpacing: 1.1,
         textDecoration: "none",
         textTransform: "uppercase",
-    },
-
-    overline2: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 12,
-        lineHeight: 32,
-        fontWeight: 500,
-        letterSpacing: 2,
-        textDecoration: "none",
-        textTransform: "none",
     },
 };

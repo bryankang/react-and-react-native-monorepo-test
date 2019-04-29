@@ -1,0 +1,72 @@
+{
+  "name": "@trainerroad/trc-react-native-1",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/index.ts",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "run-ios": "react-native run-ios",
+    "run-android": "react-native run-android",
+    "lint:styles": "stylelint 'src/components/**/*.ts'",
+    "watch:main": "rollup -c --watch",
+    "watch:types": "tsc -w --emitDeclarationOnly",
+    "watch": "concurrently --kill-others \"yarn run watch:main\" \"yarn run watch:types\"",
+    "build": "rm -rf dist && rollup -c && tsc --emitDeclarationOnly",
+    "react-native": "react-native"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1",
+    "react": "16.8.3",
+    "react-native": "0.59.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/runtime": "7.4.3",
+    "@storybook/addon-knobs": "^5.1.0-alpha.34",
+    "@storybook/addon-ondevice-knobs": "^5.1.0-alpha.34",
+    "@storybook/react-native": "^5.1.0-alpha.34",
+    "@trainerroad/trc-core": "0.1.0",
+    "@types/jest": "24.0.11",
+    "@types/ramda": "types/npm-ramda#dist",
+    "@types/react": "16.8.14",
+    "@types/react-native": "0.57.47",
+    "@types/react-test-renderer": "16.8.1",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
+    "babel-jest": "24.7.1",
+    "babel-plugin-ramda": "^2.0.0",
+    "concurrently": "^4.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "jest": "24.7.1",
+    "metro-react-native-babel-preset": "0.53.1",
+    "prettier": "^1.17.0",
+    "react-test-renderer": "16.8.3",
+    "rollup": "^1.10.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-copy": "^1.1.0",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "typescript": "3.4.4",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  }
+}

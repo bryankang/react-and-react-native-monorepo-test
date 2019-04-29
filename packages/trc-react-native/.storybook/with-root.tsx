@@ -3,14 +3,15 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { select } from '@storybook/addon-knobs';
 import { StatusBar } from '../src/components/status-bar/status-bar';
-import { ThemeProvider } from '../src/utils/use-theme';
+import { Theme, lightTheme, darkTheme } from '@trainerroad/trc-core';
+import { ThemeProvider } from '../src/utils/utils';
 
-const light = {name: 'light'}
-const dark = {name: 'dark'}
+const light = lightTheme;
+const dark = darkTheme;
 
 const themes = [
-  light,
-  dark,
+  lightTheme,
+  darkTheme,
 ];
 
 const selectOptions = themes.reduce((acc: any, value) => {
@@ -18,17 +19,25 @@ const selectOptions = themes.reduce((acc: any, value) => {
   return acc;
 }, {});
 
-const styles = StyleSheet.create({
-  root: {
+
+function getRootStyles(args: { theme: Partial<Theme>; }) {
+  const backgroundColor: any = R.pathOr(lightTheme.backgroundColor, ["theme", "backgroundColor"], args);
+
+  const root = {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    backgroundColor,
+  };
+
+  return {
+    root,
+  };
+}
 
 export function withRoot(storyFn: any): React.ReactElement {
   const themeName = select('theme', selectOptions, 'light');
-  const theme = R.find(R.propEq('name', themeName), themes);
+  const theme: any = R.find(R.propEq('name', themeName), themes);
+
+  const styles = getRootStyles({ theme });
 
   return (
     <ThemeProvider theme={theme}>

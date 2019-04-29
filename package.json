@@ -5,11 +5,9 @@
     "packages" : [
       "packages/*"
     ],
-    "nohoist": [
+  "nohoist": [
       "**/react-native",
-      "**/react-native/**",
-      "**/@storybook*",
-      "**/@storybook*/**"
+      "**/react-native/**"
     ]
   },
   "description": "TrainerRoad's component library"

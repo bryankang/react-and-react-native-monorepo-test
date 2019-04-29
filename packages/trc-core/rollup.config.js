@@ -21,6 +21,10 @@ export default [
             format: "cjs",
             name: "bundle"
         },
+        onwarn: function ( message ) {
+            if ( /moment/.test( message ) ) return;
+            console.error( message );
+        },
         plugins: [
             resolve({
                 jsnext: true,
@@ -29,9 +33,8 @@ export default [
             babel({
                 extensions
             }),
-            copy({
-                targets: ['src/core/fonts'],
-                outputFolder: 'dist',
+            commonjs({
+                include: /node_modules/,
             }),
         ]
     }

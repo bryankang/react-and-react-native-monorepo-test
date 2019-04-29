@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import { SerializedStyles } from '@emotion/serialize';
 import R from 'ramda';
-import { Theme } from "@trainer-road/trc-core";
+import { Theme } from "@trainerroad/trc-core";
 import { TextProps } from './text';
 
 const root = (args: { theme: Partial<Theme>, props: TextProps }): SerializedStyles => {

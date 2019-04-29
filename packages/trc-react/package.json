@@ -1,5 +1,5 @@
 {
-  "name": "@trainer-road/trc-react",
+  "name": "@trainerroad/trc-react",
   "version": "0.1.0",
   "description": "TrainerRoad's design system (React)",
   "main": "index.js",
@@ -21,7 +21,7 @@
     "@storybook/addon-storysource": "^5.0.10",
     "@storybook/addon-viewport": "^5.0.10",
     "@storybook/react": "^5.0.10",
-    "@trainer-road/trc-core": "0.1.0",
+    "@trainerroad/trc-core": "0.1.0",
     "@types/ramda": "types/npm-ramda#dist",
     "@types/react": "^16.8.12",
     "@types/react-dom": "^16.8.3",

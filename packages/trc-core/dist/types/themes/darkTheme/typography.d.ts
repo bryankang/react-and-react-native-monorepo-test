@@ -107,7 +107,7 @@ export declare const typography: {
         textDecoration: string;
         textTransform: string;
     };
-    caption1: {
+    caption: {
         fontFamily: string;
         fontSize: number;
         lineHeight: number;
@@ -116,25 +116,7 @@ export declare const typography: {
         textDecoration: string;
         textTransform: string;
     };
-    caption2: {
-        fontFamily: string;
-        fontSize: number;
-        lineHeight: number;
-        fontWeight: number;
-        letterSpacing: number;
-        textDecoration: string;
-        textTransform: string;
-    };
-    overline1: {
-        fontFamily: string;
-        fontSize: number;
-        lineHeight: number;
-        fontWeight: number;
-        letterSpacing: number;
-        textDecoration: string;
-        textTransform: string;
-    };
-    overline2: {
+    overline: {
         fontFamily: string;
         fontSize: number;
         lineHeight: number;

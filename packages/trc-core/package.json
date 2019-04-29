@@ -1,5 +1,5 @@
 {
-  "name": "@trainer-road/trc-core",
+  "name": "@trainerroad/trc-core",
   "version": "0.1.0",
   "description": "TrainerRoad's component library (core)",
   "main": "dist/index.js",
@@ -18,6 +18,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-typescript": "^7.3.3",
+    "@types/chroma-js": "^1.4.1",
     "@typescript-eslint/eslint-plugin": "^1.6.0",
     "@typescript-eslint/parser": "^1.6.0",
     "chokidar": "^2.1.5",
@@ -35,6 +36,7 @@
     "typescript": "^3.4.3"
   },
   "dependencies": {
+    "chroma-js": "^2.0.3",
     "moment": "^2.24.0"
   }
 }

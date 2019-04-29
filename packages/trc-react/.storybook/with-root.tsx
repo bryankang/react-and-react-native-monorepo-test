@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'emotion-theming'
 import { select } from '@storybook/addon-knobs';
-import { Theme, lightTheme, darkTheme } from '@trainer-road/trc-core';
+import { Theme, lightTheme, darkTheme } from '@trainerroad/trc-core';
 import './fonts';
 
 export function withRoot(storyFn): React.ReactElement {

@@ -25,7 +25,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -40,13 +40,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
 	<key>NSAppTransportSecurity</key>
-	<!--See http://ste.vn/2015/06/10/configuring-app-transport-security-ios-9-osx-10-11/ -->
 	<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>localhost</key>
@@ -56,5 +53,26 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ProximaNova-Black.otf</string>
+		<string>ProximaNova-BlackIt.otf</string>
+		<string>ProximaNova-Bold.otf</string>
+		<string>ProximaNova-BoldIt.otf</string>
+		<string>ProximaNova-Extrabld.otf</string>
+		<string>ProximaNova-ExtrabldIt.otf</string>
+		<string>ProximaNova-Light.otf</string>
+		<string>ProximaNova-LightIt.otf</string>
+		<string>ProximaNova-Medium.otf</string>
+		<string>ProximaNova-MediumIt.otf</string>
+		<string>ProximaNova-Regular.otf</string>
+		<string>ProximaNova-RegularIt.otf</string>
+		<string>ProximaNova-Semibold.otf</string>
+		<string>ProximaNova-SemiboldIt.otf</string>
+		<string>ProximaNova-ThinIt.otf</string>
+		<string>ProximaNovaT-Thin.otf</string>
+		<string>tr-icons.ttf</string>
+		<string>ProximaNova.otf</string>
+	</array>
 </dict>
 </plist>
