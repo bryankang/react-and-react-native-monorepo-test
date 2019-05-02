@@ -1,21 +1,20 @@
-import R from "ramda";
 import React from "react";
 import { ScrollView, View } from "react-native";
 import { storiesOf } from "@storybook/react-native";
 import { radios, select } from "@storybook/addon-knobs";
-import { iconCore, IconUnicodeName } from "@trainerroad/trc-core";
+import { iconCore } from "@trainerroad/trc-core";
 import { SafeAreaView } from "../safe-area-view/safe-area-view";
 import { Text } from "../text/text";
 import { Icon, IconProps } from "./icon";
 
 storiesOf("base/Icon", module)
     .add("basic", () => {
-        const iconNames = Object.keys(iconCore.unicodes) as IconUnicodeName[];
+        const iconNames = Object.keys(iconCore.unicodes);
 
         return (
             <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
                 <Icon
-                    name={select("name", iconNames, iconNames[0])}
+                    name={select("name", iconNames, iconNames[0]) as IconProps["name"]}
                     size={
                         radios(
                             "size",

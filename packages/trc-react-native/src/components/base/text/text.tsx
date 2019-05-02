@@ -1,7 +1,6 @@
 import React, { ReactElement, FC, ReactNode } from "react";
-import { Text as NativeText, TextStyle as NativeTextStyle, TextProps as NativeTextProps, StyleProp } from "react-native";
-import { animated } from "react-spring";
-import { useTheme, AnimatedText } from "../../../utils/utils";
+import { Animated, TextStyle as NativeTextStyle, TextProps as NativeTextProps, StyleProp } from "react-native";
+import { useTheme } from "../../../utils/utils";
 import { getTextStyles } from "./get-text-styles";
 
 export interface TextProps extends NativeTextProps {
@@ -36,11 +35,11 @@ export const Text: FC<TextProps> = ({
     const textStyles = getTextStyles({ theme, category });
 
     return (
-        <AnimatedText
+        <Animated.Text
             style={[textStyles.root, style]}
             {...rest}
         >
             {children}
-        </AnimatedText>
+        </Animated.Text>
     );
 };

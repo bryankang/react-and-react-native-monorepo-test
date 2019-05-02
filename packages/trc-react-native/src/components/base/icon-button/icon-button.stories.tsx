@@ -1,11 +1,9 @@
-import R from "ramda";
 import React from "react";
 import { View } from "react-native";
 import { storiesOf } from "@storybook/react-native";
 import { action } from "@storybook/addon-actions";
 import { boolean, radios, select, text } from "@storybook/addon-knobs";
 import { iconCore, IconUnicodeName } from "@trainerroad/trc-core";
-import { Text } from "../text/text";
 import { IconButton, IconButtonProps } from "./icon-button";
 
 storiesOf("base/IconButton", module)
@@ -15,15 +13,31 @@ storiesOf("base/IconButton", module)
         return (
             <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
                 <IconButton
-                    color={select("color", ["primary", "secondary", "success"], "secondary") as IconButtonProps["color"]}
+                    variant={radios(
+                        "variant",
+                        {
+                            contained: "contained",
+                            outlined: "outlined",
+                            pill: "pill",
+                        },
+                        "contained") as IconButtonProps["variant"]}
+                    color={radios(
+                        "color",
+                        {
+                            primary: "primary",
+                            secondary: "secondary",
+                            success: "success",
+                            info: "info",
+                            warning: "warning",
+                            danger: "danger"
+                        },
+                        "primary") as IconButtonProps["color"]}
+                    size={radios("size", { s: "s", m: "m", l: "l" }, "m") as IconButtonProps["size"]}
                     iconName={select("iconName", iconNames, iconNames[0])}
+                    label={text("label", "")}
                     isDisabled={boolean("isDisabled", false)}
                     onPress={action('onPress')}
-                    size={select("size", ["s", "m", "l"], "m") as IconButtonProps["size"]}
-                    variant={select("variant", ["contained", "outlined"], "contained") as IconButtonProps["variant"]}
-                >
-                    {text("children", "IconButton")}
-                </IconButton>
+                />
             </View>
         );
 });

@@ -1,11 +1,10 @@
-import React, { ReactElement, FC } from "react";
-import { Text, TextStyle, StyleProp, TextProps } from "react-native";
+import React, { ReactElement, FC, Component } from "react";
+import { Animated, Text, TextStyle, StyleProp, TextProps } from "react-native";
 import { iconCore, IconUnicodeName } from "@trainerroad/trc-core";
-import { animated, AnimatedProps } from "react-spring";
-import { useTheme, AnimatedText } from "../../../utils/utils";
+import { useTheme } from "../../../utils/utils";
 import { getIconStyles } from "./get-icon-styles";
 
-export interface IconProps extends AnimatedProps<TextProps> {
+export interface IconProps extends TextProps {
     name?: IconUnicodeName;
     size?: "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl";
     style?: StyleProp<TextStyle>;
@@ -21,11 +20,11 @@ export const Icon: FC<IconProps> = ({
     const iconStyles = getIconStyles({ theme, size });
 
     return (
-        <AnimatedText
+        <Animated.Text
             style={[iconStyles.root, style]}
             {...rest}
         >
             {iconCore.unicodes[name]}
-        </AnimatedText>
+        </Animated.Text>
     );
 };

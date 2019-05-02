@@ -8490,7 +8490,7 @@ var dark = {
       },
       danger: {
         backgroundColor: colorPalette.red1,
-        backgroundHoverColor: chroma(colorPalette.red1).brighten(.3).rgba().toString(),
+        backgroundHoverColor: chroma(colorPalette.red1).brighten(.3).css(),
         foregroundColor: colorPalette.white
       }
     },
@@ -8498,43 +8498,117 @@ var dark = {
       primary: {
         backgroundColor: colorPalette.grey4,
         iconForegroundColor: colorPalette.red,
+        iconForegroundHoverColor: colorPalette.red,
         textForegroundColor: colorPalette.red,
+        textForegroundHoverColor: colorPalette.red,
         borderColor: colorPalette.grey6,
         borderHoverColor: colorPalette.red
       },
       secondary: {
         backgroundColor: colorPalette.grey4,
         iconForegroundColor: colorPalette.grey12,
+        iconForegroundHoverColor: colorPalette.grey12,
         textForegroundColor: colorPalette.grey12,
+        textForegroundHoverColor: colorPalette.grey12,
         borderColor: colorPalette.grey6,
-        borderHoverColor: colorPalette.grey12
+        borderHoverColor: colorPalette.grey8
       },
       success: {
         backgroundColor: colorPalette.grey4,
         iconForegroundColor: colorPalette.green2,
+        iconForegroundHoverColor: colorPalette.green2,
         textForegroundColor: colorPalette.green2,
+        textForegroundHoverColor: colorPalette.green2,
         borderColor: colorPalette.grey6,
         borderHoverColor: colorPalette.green2
       },
       info: {
         backgroundColor: colorPalette.grey4,
         iconForegroundColor: colorPalette.blue3,
+        iconForegroundHoverColor: colorPalette.blue3,
         textForegroundColor: colorPalette.blue3,
+        textForegroundHoverColor: colorPalette.blue3,
         borderColor: colorPalette.grey6,
         borderHoverColor: colorPalette.blue3
       },
       warning: {
         backgroundColor: colorPalette.grey4,
         iconForegroundColor: colorPalette.yellow3,
+        iconForegroundHoverColor: colorPalette.yellow3,
         textForegroundColor: colorPalette.yellow3,
+        textForegroundHoverColor: colorPalette.yellow3,
         borderColor: colorPalette.grey6,
         borderHoverColor: colorPalette.yellow3
       },
       danger: {
         backgroundColor: colorPalette.grey4,
         iconForegroundColor: colorPalette.red2,
-        textForegroundColor: colorPalette.white,
+        iconForegroundHoverColor: colorPalette.red2,
+        textForegroundColor: colorPalette.grey12,
+        textForegroundHoverColor: colorPalette.grey12,
         borderColor: colorPalette.grey6,
+        borderHoverColor: chroma(colorPalette.red1).brighten(.3).css()
+      }
+    },
+    pill: {
+      primary: {
+        backgroundColor: colorPalette.grey3,
+        backgroundHoverColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.grey12,
+        iconForegroundHoverColor: colorPalette.grey12,
+        textForegroundColor: colorPalette.grey12,
+        textForegroundHoverColor: colorPalette.grey12,
+        borderColor: colorPalette.grey5,
+        borderHoverColor: colorPalette.red
+      },
+      secondary: {
+        backgroundColor: colorPalette.grey3,
+        backgroundHoverColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.grey12,
+        iconForegroundHoverColor: colorPalette.grey12,
+        textForegroundColor: colorPalette.grey12,
+        textForegroundHoverColor: colorPalette.grey12,
+        borderColor: colorPalette.grey5,
+        borderHoverColor: colorPalette.grey7
+      },
+      success: {
+        backgroundColor: colorPalette.grey3,
+        backgroundHoverColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.grey12,
+        iconForegroundHoverColor: colorPalette.grey12,
+        textForegroundColor: colorPalette.grey12,
+        textForegroundHoverColor: colorPalette.grey12,
+        borderColor: colorPalette.grey5,
+        borderHoverColor: colorPalette.green2
+      },
+      info: {
+        backgroundColor: colorPalette.grey3,
+        backgroundHoverColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.grey12,
+        iconForegroundHoverColor: colorPalette.grey12,
+        textForegroundColor: colorPalette.grey12,
+        textForegroundHoverColor: colorPalette.grey12,
+        borderColor: colorPalette.grey5,
+        borderHoverColor: colorPalette.blue3
+      },
+      warning: {
+        backgroundColor: colorPalette.grey3,
+        backgroundHoverColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.grey12,
+        iconForegroundHoverColor: colorPalette.grey12,
+        textForegroundColor: colorPalette.grey12,
+        textForegroundHoverColor: colorPalette.grey12,
+        borderColor: colorPalette.grey5,
+        borderHoverColor: colorPalette.yellow3
+      },
+      danger: {
+        backgroundColor: colorPalette.grey3,
+        backgroundHoverColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.grey12,
+        iconForegroundHoverColor: colorPalette.grey12,
+        textForegroundColor: colorPalette.grey12,
+        textForegroundHoverColor: colorPalette.grey12,
+        borderColor: colorPalette.grey5,
         borderHoverColor: colorPalette.red1
       }
     }
@@ -8752,7 +8826,7 @@ var light = {
       },
       danger: {
         backgroundColor: colorPalette.red1,
-        backgroundHoverColor: chroma(colorPalette.red1).brighten(.3).rgba().toString(),
+        backgroundHoverColor: chroma(colorPalette.red1).brighten(.3).css(),
         foregroundColor: colorPalette.white
       }
     },
@@ -8760,42 +8834,116 @@ var light = {
       primary: {
         backgroundColor: "rgba(0,0,0,0)",
         iconForegroundColor: colorPalette.red,
+        iconForegroundHoverColor: colorPalette.red,
         textForegroundColor: colorPalette.red,
+        textForegroundHoverColor: colorPalette.red,
         borderColor: colorPalette.grey11,
         borderHoverColor: colorPalette.red
       },
       secondary: {
         backgroundColor: "rgba(0,0,0,0)",
-        iconForegroundColor: colorPalette.grey12,
-        textForegroundColor: colorPalette.grey12,
+        iconForegroundColor: colorPalette.grey7,
+        iconForegroundHoverColor: colorPalette.grey6,
+        textForegroundColor: colorPalette.grey7,
+        textForegroundHoverColor: colorPalette.grey6,
         borderColor: colorPalette.grey11,
-        borderHoverColor: colorPalette.grey12
+        borderHoverColor: colorPalette.grey7
       },
       success: {
         backgroundColor: "rgba(0,0,0,0)",
         iconForegroundColor: colorPalette.green2,
+        iconForegroundHoverColor: colorPalette.green2,
         textForegroundColor: colorPalette.green2,
+        textForegroundHoverColor: colorPalette.green2,
         borderColor: colorPalette.grey11,
         borderHoverColor: colorPalette.green2
       },
       info: {
         backgroundColor: "rgba(0,0,0,0)",
         iconForegroundColor: colorPalette.blue3,
+        iconForegroundHoverColor: colorPalette.blue3,
         textForegroundColor: colorPalette.blue3,
+        textForegroundHoverColor: colorPalette.blue3,
         borderColor: colorPalette.grey11,
         borderHoverColor: colorPalette.blue3
       },
       warning: {
         backgroundColor: "rgba(0,0,0,0)",
         iconForegroundColor: colorPalette.yellow3,
+        iconForegroundHoverColor: colorPalette.yellow3,
         textForegroundColor: colorPalette.yellow3,
+        textForegroundHoverColor: colorPalette.yellow3,
         borderColor: colorPalette.grey11,
         borderHoverColor: colorPalette.yellow3
       },
       danger: {
         backgroundColor: "rgba(0,0,0,0)",
         iconForegroundColor: colorPalette.red1,
+        iconForegroundHoverColor: colorPalette.red1,
         textForegroundColor: colorPalette.grey7,
+        textForegroundHoverColor: colorPalette.grey7,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: chroma(colorPalette.red1).brighten(.7).css()
+      }
+    },
+    pill: {
+      primary: {
+        backgroundColor: "rgba(0,0,0,0)",
+        backgroundHoverColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.grey7,
+        iconForegroundHoverColor: colorPalette.grey7,
+        textForegroundColor: colorPalette.grey7,
+        textForegroundHoverColor: colorPalette.grey7,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: colorPalette.red
+      },
+      secondary: {
+        backgroundColor: "rgba(0,0,0,0)",
+        backgroundHoverColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.grey7,
+        iconForegroundHoverColor: colorPalette.grey7,
+        textForegroundColor: colorPalette.grey7,
+        textForegroundHoverColor: colorPalette.grey7,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: colorPalette.grey9
+      },
+      success: {
+        backgroundColor: "rgba(0,0,0,0)",
+        backgroundHoverColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.grey7,
+        iconForegroundHoverColor: colorPalette.grey7,
+        textForegroundColor: colorPalette.grey7,
+        textForegroundHoverColor: colorPalette.grey7,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: colorPalette.green2
+      },
+      info: {
+        backgroundColor: "rgba(0,0,0,0)",
+        backgroundHoverColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.grey7,
+        iconForegroundHoverColor: colorPalette.grey7,
+        textForegroundColor: colorPalette.grey7,
+        textForegroundHoverColor: colorPalette.grey7,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: colorPalette.blue3
+      },
+      warning: {
+        backgroundColor: "rgba(0,0,0,0)",
+        backgroundHoverColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.grey7,
+        iconForegroundHoverColor: colorPalette.grey7,
+        textForegroundColor: colorPalette.grey7,
+        textForegroundHoverColor: colorPalette.grey7,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: colorPalette.yellow3
+      },
+      danger: {
+        backgroundColor: "rgba(0,0,0,0)",
+        backgroundHoverColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.grey7,
+        iconForegroundHoverColor: colorPalette.grey7,
+        textForegroundColor: colorPalette.grey7,
+        textForegroundHoverColor: colorPalette.grey7,
         borderColor: colorPalette.grey11,
         borderHoverColor: colorPalette.red1
       }

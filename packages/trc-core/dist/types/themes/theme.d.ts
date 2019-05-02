@@ -216,42 +216,116 @@ export interface Theme {
             primary: {
                 backgroundColor: string;
                 iconForegroundColor: string;
+                iconForegroundHoverColor: string;
                 textForegroundColor: string;
+                textForegroundHoverColor: string;
                 borderColor: string;
                 borderHoverColor: string;
             };
             secondary: {
                 backgroundColor: string;
                 iconForegroundColor: string;
+                iconForegroundHoverColor: string;
                 textForegroundColor: string;
+                textForegroundHoverColor: string;
                 borderColor: string;
                 borderHoverColor: string;
             };
             success: {
                 backgroundColor: string;
                 iconForegroundColor: string;
+                iconForegroundHoverColor: string;
                 textForegroundColor: string;
+                textForegroundHoverColor: string;
                 borderColor: string;
                 borderHoverColor: string;
             };
             info: {
                 backgroundColor: string;
                 iconForegroundColor: string;
+                iconForegroundHoverColor: string;
                 textForegroundColor: string;
+                textForegroundHoverColor: string;
                 borderColor: string;
                 borderHoverColor: string;
             };
             warning: {
                 backgroundColor: string;
                 iconForegroundColor: string;
+                iconForegroundHoverColor: string;
                 textForegroundColor: string;
+                textForegroundHoverColor: string;
                 borderColor: string;
                 borderHoverColor: string;
             };
             danger: {
                 backgroundColor: string;
                 iconForegroundColor: string;
+                iconForegroundHoverColor: string;
                 textForegroundColor: string;
+                textForegroundHoverColor: string;
+                borderColor: string;
+                borderHoverColor: string;
+            };
+        };
+        pill: {
+            primary: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                iconForegroundColor: string;
+                iconForegroundHoverColor: string;
+                textForegroundColor: string;
+                textForegroundHoverColor: string;
+                borderColor: string;
+                borderHoverColor: string;
+            };
+            secondary: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                iconForegroundColor: string;
+                iconForegroundHoverColor: string;
+                textForegroundColor: string;
+                textForegroundHoverColor: string;
+                borderColor: string;
+                borderHoverColor: string;
+            };
+            success: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                iconForegroundColor: string;
+                iconForegroundHoverColor: string;
+                textForegroundColor: string;
+                textForegroundHoverColor: string;
+                borderColor: string;
+                borderHoverColor: string;
+            };
+            info: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                iconForegroundColor: string;
+                iconForegroundHoverColor: string;
+                textForegroundColor: string;
+                textForegroundHoverColor: string;
+                borderColor: string;
+                borderHoverColor: string;
+            };
+            warning: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                iconForegroundColor: string;
+                iconForegroundHoverColor: string;
+                textForegroundColor: string;
+                textForegroundHoverColor: string;
+                borderColor: string;
+                borderHoverColor: string;
+            };
+            danger: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                iconForegroundColor: string;
+                iconForegroundHoverColor: string;
+                textForegroundColor: string;
+                textForegroundHoverColor: string;
                 borderColor: string;
                 borderHoverColor: string;
             };

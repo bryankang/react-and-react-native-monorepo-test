@@ -1,7 +1,5 @@
 import R from "ramda";
-import chroma from "chroma-js";
-import { ViewStyle, TextStyle, StyleProp, StyleSheetProperties, ViewPropTypes, StyleSheet } from "react-native";
-import { AnimatedProps, UseSpringProps, ToProp } from "react-spring";
+import { ViewStyle, TextStyle, StyleProp, StyleSheet } from "react-native";
 import { Theme, light as lightTheme } from "@trainerroad/trc-core";
 import { ButtonProps } from "./button";
 
@@ -30,9 +28,13 @@ const baseStyles = StyleSheet.create({
 
 export interface ButtonStyles {
     root: StyleProp<ViewStyle>;
-    rootAnimation: {
-        from: ViewStyle;
-        to: ViewStyle;
+    rootAnimationBackgroundColor: {
+        from: string;
+        to: string;
+    };
+    rootAnimationBorderColor: {
+        from: string;
+        to: string;
     };
     icon: StyleProp<TextStyle>;
     text: StyleProp<TextStyle>;
@@ -50,7 +52,8 @@ interface Params {
 
 export function getButtonStyles(params: Params): ButtonStyles {
     const root: StyleProp<ViewStyle> = [baseStyles.root];
-    const rootAnimation = {} as ButtonStyles["rootAnimation"];
+    const rootAnimationBackgroundColor = {} as ButtonStyles["rootAnimationBackgroundColor"];
+    const rootAnimationBorderColor = {} as ButtonStyles["rootAnimationBorderColor"];
     const icon: StyleProp<TextStyle> = [baseStyles.icon];
     const text: StyleProp<TextStyle> = [baseStyles.text];
 
@@ -106,14 +109,10 @@ export function getButtonStyles(params: Params): ButtonStyles {
             color: buttonStyles.foregroundColor,
         });
 
-        rootAnimation.from = {
-            backgroundColor: buttonStyles.backgroundColor,
-        };
-
-        rootAnimation.to = {
-            backgroundColor: buttonStyles.backgroundHoverColor,
-        };
-
+        rootAnimationBackgroundColor.from = buttonStyles.backgroundColor;
+        rootAnimationBackgroundColor.to = buttonStyles.backgroundHoverColor;
+        rootAnimationBorderColor.from = "rgba(0,0,0,0)";
+        rootAnimationBorderColor.to = "rgba(0,0,0,0)";
     } else if (params.variant === "outlined") {
         const outlinedButtonTheme = R.pathOr(lightTheme.button.outlined, ["button", "outlined"], params.theme) as Theme["button"]["outlined"];
         const buttonStyles = outlinedButtonTheme[params.color];
@@ -135,83 +134,41 @@ export function getButtonStyles(params: Params): ButtonStyles {
             color: buttonStyles.textForegroundColor,
         });
 
-        rootAnimation.from = {
-            backgroundColor: buttonStyles.backgroundColor,
+        rootAnimationBackgroundColor.from = buttonStyles.backgroundColor;
+        rootAnimationBackgroundColor.to = buttonStyles.backgroundColor;
+        rootAnimationBorderColor.from = buttonStyles.borderColor;
+        rootAnimationBorderColor.to = buttonStyles.borderHoverColor;
+    } else if (params.variant === "pill") {
+        const pillButtonTheme = R.pathOr(lightTheme.button.pill, ["button", "pill"], params.theme) as Theme["button"]["pill"];
+        const buttonStyles = pillButtonTheme[params.color];
+
+        root.push({
+            borderWidth: 1,
             borderColor: buttonStyles.borderColor,
-        };
+        });
 
-        rootAnimation.to = {
-            borderColor: buttonStyles.borderHoverColor,
-        };
+        icon.push({
+            position: "relative",
+            top: -1,
+            color: buttonStyles.iconForegroundColor,
+        });
+
+        text.push({
+            position: "relative",
+            top: -1,
+            color: buttonStyles.textForegroundColor,
+        });
+
+        rootAnimationBackgroundColor.from = buttonStyles.backgroundColor;
+        rootAnimationBackgroundColor.to = buttonStyles.backgroundHoverColor;
+        rootAnimationBorderColor.from = buttonStyles.borderColor;
+        rootAnimationBorderColor.to = buttonStyles.borderHoverColor;
     }
-
-    // if (params.variant === "contained") {
-    //     const containedStyles = R.pathOr(defaultStyles.contained, ["contained"], baseStyles) as Theme["button"]["contained"];
-    //     const styles = containedStyles[params.color];
-
-    //     // rootAnimation.from = {
-    //     //     backgroundColor: !params.isDisabled ? styles.backgroundColor : styles.backgroundDisabledColor,
-    //     //     borderColor: !params.isDisabled ? styles.borderColor : styles.borderDisabledColor,
-    //     // };
-
-    //     // rootAnimation.to = {
-    //     //     backgroundColor: !params.isDisabled ? styles.backgroundHoverColor : styles.backgroundDisabledColor,
-    //     //     borderColor: !params.isDisabled ? styles.borderHoverColor : styles.borderDisabledColor,
-    //     // };
-
-    //     rootAnimation.from = {
-    //         backgroundColor: styles.backgroundColor,
-    //         borderColor: styles.borderColor,
-    //     };
-
-    //     rootAnimation.to = {
-    //         backgroundColor: styles.backgroundHoverColor,
-    //         borderColor: styles.borderHoverColor,
-    //     };
-
-    //     text.push({
-    //         color: styles.textColor,
-    //     });
-
-    //     icon.push({
-    //         color: styles.iconColor,
-    //     });
-    // } else {
-    //     const outlinedStyles = R.pathOr(defaultStyles.outlined, ["outlined"], baseStyles) as Theme["button"]["outlined"];
-    //     const styles = outlinedStyles[params.color];
-
-    //     // rootAnimation.from = {
-    //     //     backgroundColor: !params.isDisabled ? styles.backgroundColor : styles.backgroundDisabledColor,
-    //     //     borderColor: !params.isDisabled ? styles.borderColor : styles.borderDisabledColor,
-    //     // };
-
-    //     // rootAnimation.to = {
-    //     //     backgroundColor: !params.isDisabled ? styles.backgroundHoverColor : styles.backgroundDisabledColor,
-    //     //     borderColor: !params.isDisabled ? styles.borderHoverColor : styles.borderDisabledColor,
-    //     // };
-
-    //     rootAnimation.from = {
-    //         backgroundColor: styles.backgroundColor,
-    //         borderColor: styles.borderColor,
-    //     };
-
-    //     rootAnimation.to = {
-    //         backgroundColor: styles.backgroundHoverColor,
-    //         borderColor: styles.borderHoverColor,
-    //     };
-
-    //     text.push({
-    //         color: styles.textColor,
-    //     });
-
-    //     icon.push({
-    //         color: styles.iconColor,
-    //     });
-    // }
 
     return {
         root,
-        rootAnimation,
+        rootAnimationBackgroundColor,
+        rootAnimationBorderColor,
         icon,
         text,
     };

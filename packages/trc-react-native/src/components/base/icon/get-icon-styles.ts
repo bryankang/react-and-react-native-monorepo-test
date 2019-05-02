@@ -25,10 +25,9 @@ interface Params {
 }
 
 export function getIconStyles(params: Params): IconStyles {
-    const color = R.pathOr(lightTheme.emphases.default, ["theme", "emphases", "default"], params) as Theme["emphases"]["default"];
-
     const root: StyleProp<TextStyle>[] = [];
 
+    const color = R.pathOr(lightTheme.emphases.default, ["theme", "emphases", "default"], params) as Theme["emphases"]["default"];
     const length = convertSizeToLength(params.size);
 
     root.push({
