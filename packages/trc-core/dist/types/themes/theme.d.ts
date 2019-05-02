@@ -1,14 +1,20 @@
 export interface Theme {
     name: string;
     backgroundColor: string;
+    emphases: {
+        active: string;
+        default: string;
+        muted: string;
+        disabled: string;
+        divider: string;
+    };
     colors: {
-        foreground: string;
         background1: string;
         background2: string;
         background3: string;
         background4: string;
         primary: string;
-        default: string;
+        secondary: string;
         danger: string;
         success: string;
         info: string;
@@ -27,173 +33,228 @@ export interface Theme {
         trainingPeaks: string;
         dropbox: string;
     };
-    text: {
-        emphases: {
-            default: number;
-            semimuted: number;
-            muted: number;
-            disabled: number;
+    typography: {
+        heading1: {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
         };
-        categories: {
-            headline1: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            headline2: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            headline3: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            headline4: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            headline5: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            headline6: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            subtitle1: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            subtitle2: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            body1: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            body2: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            body3: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
-            overline: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "uppercase" | "uppercase" | "lowercase" | "capitalize";
-            };
-            caption: {
-                fontFamily: string[];
-                fontSize: number;
-                lineHeight: number;
-                fontWeight: number;
-                letterSpacing: number;
-                textDecoration: "none" | "underline";
-                textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
-            };
+        heading2: {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
         };
-    };
-    icon: {
-        colors: {
-            active: string;
-            default: string;
-            disabled: string;
+        heading3: {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        heading4: {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        heading5: {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        heading6: {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        heading7: {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        "paragraph-lead": {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        paragraph: {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        "paragraph--semibold": {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        "paragraph-s": {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        "paragraph-s--semibold": {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        "paragraph-xs": {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        "paragraph-xs--semibold": {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        label: {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
+        };
+        "label-s": {
+            fontFamily: string[];
+            fontSize: number;
+            lineHeight: number;
+            fontWeight: number;
+            letterSpacing: number;
+            textDecoration: "none" | "underline";
+            textTransform: "none" | "uppercase" | "lowercase" | "capitalize";
         };
     };
     button: {
         contained: {
-            none: {
-                backgroundColor: string;
-                backgroundOverlayColor: string;
-                color: string;
-            };
             primary: {
                 backgroundColor: string;
-                backgroundOverlayColor: string;
-                color: string;
+                backgroundHoverColor: string;
+                foregroundColor: string;
+            };
+            secondary: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                foregroundColor: string;
+            };
+            success: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                foregroundColor: string;
+            };
+            info: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                foregroundColor: string;
+            };
+            warning: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                foregroundColor: string;
+            };
+            danger: {
+                backgroundColor: string;
+                backgroundHoverColor: string;
+                foregroundColor: string;
             };
         };
         outlined: {
-            none: {
-                borderColor: string;
-                borderOverlayColor: string;
-                color: string;
-            };
             primary: {
+                backgroundColor: string;
+                iconForegroundColor: string;
+                textForegroundColor: string;
                 borderColor: string;
-                borderOverlayColor: string;
-                color: string;
+                borderHoverColor: string;
+            };
+            secondary: {
+                backgroundColor: string;
+                iconForegroundColor: string;
+                textForegroundColor: string;
+                borderColor: string;
+                borderHoverColor: string;
+            };
+            success: {
+                backgroundColor: string;
+                iconForegroundColor: string;
+                textForegroundColor: string;
+                borderColor: string;
+                borderHoverColor: string;
+            };
+            info: {
+                backgroundColor: string;
+                iconForegroundColor: string;
+                textForegroundColor: string;
+                borderColor: string;
+                borderHoverColor: string;
+            };
+            warning: {
+                backgroundColor: string;
+                iconForegroundColor: string;
+                textForegroundColor: string;
+                borderColor: string;
+                borderHoverColor: string;
+            };
+            danger: {
+                backgroundColor: string;
+                iconForegroundColor: string;
+                textForegroundColor: string;
+                borderColor: string;
+                borderHoverColor: string;
             };
         };
-    };
-    card: {
-        backgroundColor: string;
-        shadowColor: string;
-        shadowOffsetX: number;
-        shadowOffsetY: number;
-        shadowBlurRadius: number;
-        shadowSpreadRadius: number;
-        borderRadius: number;
     };
 }

@@ -1,2 +1,2 @@
-import { Theme } from '../theme';
-export declare const lightTheme: Theme;
+import { Theme } from "../theme";
+export declare const light: Theme;

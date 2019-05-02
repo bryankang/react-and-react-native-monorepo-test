@@ -3,7 +3,8 @@ import { getStorybookUI, configure, addDecorator } from '@storybook/react-native
 import { withKnobs } from '@storybook/addon-knobs';
 import { withRoot } from './with-root';
 
-import './rn-addons';
+// import './rn-addons';
+// import './addons';
 
 // import stories
 configure(() => {
@@ -14,7 +15,9 @@ configure(() => {
 
 // Refer to https://github.com/storybooks/storybook/tree/master/app/react-native#start-command-parameters
 // To find allowed options for getStorybookUI
-const _StorybookUIRoot = getStorybookUI({});
+const _StorybookUIRoot = getStorybookUI({
+  onDeviceUI: false,
+});
 
 // If you are using React Native vanilla write your app name here.
 // If you use Expo you can safely remove this line.

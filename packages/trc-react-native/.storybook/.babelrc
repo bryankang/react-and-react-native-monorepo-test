@@ -1,0 +1,4 @@
+// remove this file when upgrading to v5 of storybook
+{
+  "presets": ["module:metro-react-native-babel-preset"],
+}

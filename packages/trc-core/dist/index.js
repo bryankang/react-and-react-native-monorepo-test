@@ -8207,15 +8207,15 @@ var colorPalette = {
   red1: "#801810",
   red2: "#da291c",
   red3: "#e53f33",
-  red: "red2",
-  redHover: "red3",
+  red: "#da291c",
+  redHover: "#e53f33",
   green1: "#377c1c",
   green2: "#439f1f",
   green3: "#5bb836",
   green4: "#7acd59",
   green5: "#bae1a2",
-  green: "green2",
-  greenHover: "green3",
+  green: "#439f1f",
+  greenHover: "#5bb836",
   blue1: "#004062",
   blue2: "#1271b4",
   blue3: "#1482c8",
@@ -8279,19 +8279,24 @@ var colorPalette = {
   temp: "#da1ccd"
 };
 
-// import { colors, common } from '../../styles/styles';
 var primarySansSerifFontFamily = ["Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"];
-var darkTheme = {
-  name: 'dark',
+var dark = {
+  name: "dark",
   backgroundColor: colorPalette.grey2,
+  emphases: {
+    active: "rgba(255, 255, 255, 1)",
+    "default": "rgba(255, 255, 255, .78)",
+    muted: "rgba(255, 255, 255, .6)",
+    disabled: "rgba(255, 255, 255, .32)",
+    divider: "rgba(255, 255, 255 .1)"
+  },
   colors: {
-    foreground: colorPalette.white,
     background1: colorPalette.grey1,
     background2: colorPalette.grey2,
     background3: colorPalette.grey3,
     background4: colorPalette.grey4,
     primary: colorPalette.red2,
-    "default": colorPalette.grey3,
+    secondary: colorPalette.grey3,
     danger: colorPalette.danger,
     success: colorPalette.green2,
     info: colorPalette.blue3,
@@ -8310,241 +8315,250 @@ var darkTheme = {
     trainingPeaks: colorPalette.trainingPeaks,
     dropbox: colorPalette.dropbox
   },
-  text: {
-    emphases: {
-      "default": 1,
-      semimuted: .8,
-      muted: .6,
-      disabled: .4
+  typography: {
+    heading1: {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 40,
+      lineHeight: 40 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "capitalize"
     },
-    categories: {
-      headline1: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 96,
-        lineHeight: 96,
-        fontWeight: 300,
-        letterSpacing: -1.5,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      headline2: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 60,
-        lineHeight: 60,
-        fontWeight: 300,
-        letterSpacing: -0.5,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      headline3: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 48,
-        lineHeight: 50,
-        fontWeight: 400,
-        letterSpacing: 1,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      headline4: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 34,
-        lineHeight: 40,
-        fontWeight: 400,
-        letterSpacing: 0.25,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      headline5: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 24,
-        lineHeight: 32,
-        fontWeight: 400,
-        letterSpacing: 1,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      headline6: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 20,
-        lineHeight: 32,
-        fontWeight: 600,
-        letterSpacing: 0.25,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      subtitle1: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 16,
-        lineHeight: 28,
-        fontWeight: 400,
-        letterSpacing: 0.15,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      subtitle2: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 14,
-        lineHeight: 22,
-        fontWeight: 600,
-        letterSpacing: 0.1,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      body1: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 18,
-        lineHeight: 24,
-        fontWeight: 400,
-        letterSpacing: 0.5,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      body2: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 14,
-        lineHeight: 20,
-        fontWeight: 400,
-        letterSpacing: 0.25,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      body3: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 12,
-        lineHeight: 16,
-        fontWeight: 400,
-        letterSpacing: 0.2,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      // link: {
-      //     fontFamily: primarySansSerifFontFamily,
-      //     fontSize: 12,
-      //     lineHeight: 16,
-      //     fontWeight: 400,
-      //     letterSpacing: 0.2,
-      //     textDecoration: "none",
-      //     textTransform: "none",
-      // },
-      // button: {
-      //     fontFamily: primarySansSerifFontFamily,
-      //     fontSize: 14,
-      //     lineHeight: 36,
-      //     fontWeight: 600,
-      //     letterSpacing: 1,
-      //     textDecoration: "none",
-      //     textTransform: "capitalize",
-      // },
-      overline: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 12,
-        lineHeight: 32,
-        fontWeight: 600,
-        letterSpacing: 1.1,
-        textDecoration: "none",
-        textTransform: "uppercase"
-      },
-      caption: {
-        fontFamily: primarySansSerifFontFamily,
-        fontSize: 12,
-        lineHeight: 20,
-        fontWeight: 400,
-        letterSpacing: 0.4,
-        textDecoration: "none",
-        textTransform: "none"
-      }
-    }
-  },
-  icon: {
-    colors: {
-      active: 'rgba(255,255,255,1)',
-      "default": 'rgba(255,255,255,.6)',
-      disabled: 'rgba(255,255,255,.12)'
+    heading2: {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 34,
+      lineHeight: 34 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    heading3: {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 27,
+      lineHeight: 27 * 1.2,
+      fontWeight: 700,
+      letterSpacing: .2,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    heading4: {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 24,
+      lineHeight: 24 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    heading5: {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 18,
+      lineHeight: 18 * 1.2,
+      fontWeight: 700,
+      letterSpacing: .2,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    heading6: {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 14,
+      lineHeight: 14 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    heading7: {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 12,
+      lineHeight: 12 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    "paragraph-lead": {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 24,
+      lineHeight: 24 * 1.5,
+      fontWeight: 600,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    paragraph: {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 18,
+      lineHeight: 18 * 1.5,
+      fontWeight: 400,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    "paragraph--semibold": {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 18,
+      lineHeight: 18 * 1.5,
+      fontWeight: 600,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    "paragraph-s": {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 14,
+      lineHeight: 14 * 1.5,
+      fontWeight: 400,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    "paragraph-s--semibold": {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 14,
+      lineHeight: 14 * 1.5,
+      fontWeight: 600,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    "paragraph-xs": {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 12,
+      lineHeight: 12 * 1.5,
+      fontWeight: 400,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    "paragraph-xs--semibold": {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 12,
+      lineHeight: 12 * 1.5,
+      fontWeight: 600,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    label: {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 12,
+      lineHeight: 12 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "uppercase"
+    },
+    "label-s": {
+      fontFamily: primarySansSerifFontFamily,
+      fontSize: 10,
+      lineHeight: 10 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0.4,
+      textDecoration: "none",
+      textTransform: "uppercase"
     }
   },
   button: {
     contained: {
-      none: {
-        backgroundColor: colorPalette.grey5,
-        backgroundOverlayColor: "rgba(255,255,255,.08)",
-        color: colorPalette.white
-      },
       primary: {
-        backgroundColor: colorPalette.red2,
-        backgroundOverlayColor: "rgba(255,255,255,.16)",
-        color: colorPalette.white
+        backgroundColor: colorPalette.red,
+        backgroundHoverColor: colorPalette.redHover,
+        foregroundColor: colorPalette.white
+      },
+      secondary: {
+        backgroundColor: colorPalette.grey3,
+        backgroundHoverColor: colorPalette.grey5,
+        foregroundColor: colorPalette.white
+      },
+      success: {
+        backgroundColor: colorPalette.green2,
+        backgroundHoverColor: colorPalette.green3,
+        foregroundColor: colorPalette.white
+      },
+      info: {
+        backgroundColor: colorPalette.blue3,
+        backgroundHoverColor: colorPalette.blue4,
+        foregroundColor: colorPalette.white
+      },
+      warning: {
+        backgroundColor: colorPalette.yellow2,
+        backgroundHoverColor: colorPalette.yellow3,
+        foregroundColor: colorPalette.white
+      },
+      danger: {
+        backgroundColor: colorPalette.red1,
+        backgroundHoverColor: chroma(colorPalette.red1).brighten(.3).rgba().toString(),
+        foregroundColor: colorPalette.white
       }
     },
     outlined: {
-      none: {
-        borderColor: colorPalette.grey6,
-        borderOverlayColor: colorPalette.grey8,
-        color: colorPalette.white
-      },
       primary: {
+        backgroundColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.red,
+        textForegroundColor: colorPalette.red,
         borderColor: colorPalette.grey6,
-        borderOverlayColor: colorPalette.red2,
-        color: colorPalette.red2
+        borderHoverColor: colorPalette.red
+      },
+      secondary: {
+        backgroundColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.grey12,
+        textForegroundColor: colorPalette.grey12,
+        borderColor: colorPalette.grey6,
+        borderHoverColor: colorPalette.grey12
+      },
+      success: {
+        backgroundColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.green2,
+        textForegroundColor: colorPalette.green2,
+        borderColor: colorPalette.grey6,
+        borderHoverColor: colorPalette.green2
+      },
+      info: {
+        backgroundColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.blue3,
+        textForegroundColor: colorPalette.blue3,
+        borderColor: colorPalette.grey6,
+        borderHoverColor: colorPalette.blue3
+      },
+      warning: {
+        backgroundColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.yellow3,
+        textForegroundColor: colorPalette.yellow3,
+        borderColor: colorPalette.grey6,
+        borderHoverColor: colorPalette.yellow3
+      },
+      danger: {
+        backgroundColor: colorPalette.grey4,
+        iconForegroundColor: colorPalette.red2,
+        textForegroundColor: colorPalette.white,
+        borderColor: colorPalette.grey6,
+        borderHoverColor: colorPalette.red1
       }
     }
-  },
-  card: {
-    backgroundColor: colorPalette.grey3,
-    shadowColor: 'rgba(0,0,0,.16)',
-    shadowOffsetX: 0,
-    shadowOffsetY: 6,
-    shadowBlurRadius: 12,
-    shadowSpreadRadius: 2,
-    borderRadius: 8
   }
 };
 
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
-
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
-    }
-
-    ownKeys.forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    });
-  }
-
-  return target;
-}
-
 var primarySansSerifFontFamily$1 = ["Proxima Nova", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"];
-var lightTheme = _objectSpread({}, darkTheme, {
-  name: 'light',
-  backgroundColor: 'white',
+var light = {
+  name: "light",
+  backgroundColor: colorPalette.white,
+  emphases: {
+    active: "rgba(0, 0, 0, .9)",
+    "default": "rgba(0, 0, 0, .78)",
+    muted: "rgba(0, 0, 0, .6)",
+    disabled: "rgba(0, 0, 0, .36)",
+    divider: "rgba(0, 0, 0 .1)"
+  },
   colors: {
-    foreground: colorPalette.black,
     background1: colorPalette.grey1,
     background2: colorPalette.grey2,
     background3: colorPalette.grey3,
     background4: colorPalette.grey4,
     primary: colorPalette.red2,
-    "default": colorPalette.grey3,
+    secondary: colorPalette.grey3,
     danger: colorPalette.danger,
     success: colorPalette.green2,
     info: colorPalette.blue3,
@@ -8563,180 +8577,235 @@ var lightTheme = _objectSpread({}, darkTheme, {
     trainingPeaks: colorPalette.trainingPeaks,
     dropbox: colorPalette.dropbox
   },
-  text: {
-    emphases: {
-      "default": .9,
-      semimuted: .7,
-      muted: .5,
-      disabled: .3
+  typography: {
+    heading1: {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 40,
+      lineHeight: 40 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "capitalize"
     },
-    categories: {
-      headline1: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 96,
-        lineHeight: 96,
-        fontWeight: 300,
-        letterSpacing: -1.5,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      headline2: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 60,
-        lineHeight: 60,
-        fontWeight: 300,
-        letterSpacing: -0.5,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      headline3: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 48,
-        lineHeight: 50,
-        fontWeight: 400,
-        letterSpacing: 1,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      headline4: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 34,
-        lineHeight: 40,
-        fontWeight: 400,
-        letterSpacing: 0.25,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      headline5: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 24,
-        lineHeight: 32,
-        fontWeight: 400,
-        letterSpacing: 1,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      headline6: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 20,
-        lineHeight: 32,
-        fontWeight: 600,
-        letterSpacing: 0.25,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      subtitle1: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 16,
-        lineHeight: 28,
-        fontWeight: 400,
-        letterSpacing: 0.15,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      subtitle2: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 14,
-        lineHeight: 22,
-        fontWeight: 600,
-        letterSpacing: 0.1,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      body1: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 18,
-        lineHeight: 24,
-        fontWeight: 400,
-        letterSpacing: 0.5,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      body2: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 14,
-        lineHeight: 20,
-        fontWeight: 400,
-        letterSpacing: 0.25,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      body3: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 12,
-        lineHeight: 16,
-        fontWeight: 400,
-        letterSpacing: 0.2,
-        textDecoration: "none",
-        textTransform: "none"
-      },
-      overline: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 12,
-        lineHeight: 32,
-        fontWeight: 600,
-        letterSpacing: 1.1,
-        textDecoration: "none",
-        textTransform: "uppercase"
-      },
-      caption: {
-        fontFamily: primarySansSerifFontFamily$1,
-        fontSize: 12,
-        lineHeight: 20,
-        fontWeight: 400,
-        letterSpacing: 0.4,
-        textDecoration: "none",
-        textTransform: "none"
-      }
-    }
-  },
-  icon: {
-    colors: {
-      active: 'rgba(0,0,0,1)',
-      "default": 'rgba(0,0,0,.6)',
-      disabled: 'rgba(0,0,0,.12)'
+    heading2: {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 34,
+      lineHeight: 34 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    heading3: {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 27,
+      lineHeight: 27 * 1.2,
+      fontWeight: 700,
+      letterSpacing: .2,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    heading4: {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 24,
+      lineHeight: 24 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    heading5: {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 18,
+      lineHeight: 18 * 1.2,
+      fontWeight: 700,
+      letterSpacing: .2,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    heading6: {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 14,
+      lineHeight: 14 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    heading7: {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 12,
+      lineHeight: 12 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "capitalize"
+    },
+    "paragraph-lead": {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 24,
+      lineHeight: 24 * 1.5,
+      fontWeight: 600,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    paragraph: {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 18,
+      lineHeight: 18 * 1.5,
+      fontWeight: 400,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    "paragraph--semibold": {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 18,
+      lineHeight: 18 * 1.5,
+      fontWeight: 600,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    "paragraph-s": {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 14,
+      lineHeight: 14 * 1.5,
+      fontWeight: 400,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    "paragraph-s--semibold": {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 14,
+      lineHeight: 14 * 1.5,
+      fontWeight: 600,
+      letterSpacing: 0,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    "paragraph-xs": {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 12,
+      lineHeight: 12 * 1.5,
+      fontWeight: 400,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    "paragraph-xs--semibold": {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 12,
+      lineHeight: 12 * 1.5,
+      fontWeight: 600,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "none"
+    },
+    label: {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 12,
+      lineHeight: 12 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0.2,
+      textDecoration: "none",
+      textTransform: "uppercase"
+    },
+    "label-s": {
+      fontFamily: primarySansSerifFontFamily$1,
+      fontSize: 10,
+      lineHeight: 10 * 1.2,
+      fontWeight: 700,
+      letterSpacing: 0.4,
+      textDecoration: "none",
+      textTransform: "uppercase"
     }
   },
   button: {
     contained: {
-      none: {
-        backgroundColor: colorPalette.grey3,
-        backgroundOverlayColor: "rgba(255,255,255,.18)",
-        color: colorPalette.white
-      },
       primary: {
-        backgroundColor: colorPalette.red2,
-        backgroundOverlayColor: "rgba(255,255,255,.16)",
-        color: colorPalette.white
+        backgroundColor: colorPalette.red,
+        backgroundHoverColor: colorPalette.redHover,
+        foregroundColor: colorPalette.white
+      },
+      secondary: {
+        backgroundColor: colorPalette.grey3,
+        backgroundHoverColor: colorPalette.grey6,
+        foregroundColor: colorPalette.white
+      },
+      success: {
+        backgroundColor: colorPalette.green2,
+        backgroundHoverColor: colorPalette.green3,
+        foregroundColor: colorPalette.white
+      },
+      info: {
+        backgroundColor: colorPalette.blue3,
+        backgroundHoverColor: colorPalette.blue4,
+        foregroundColor: colorPalette.white
+      },
+      warning: {
+        backgroundColor: colorPalette.yellow2,
+        backgroundHoverColor: colorPalette.yellow3,
+        foregroundColor: colorPalette.white
+      },
+      danger: {
+        backgroundColor: colorPalette.red1,
+        backgroundHoverColor: chroma(colorPalette.red1).brighten(.3).rgba().toString(),
+        foregroundColor: colorPalette.white
       }
     },
     outlined: {
-      none: {
-        borderColor: colorPalette.grey11,
-        borderOverlayColor: colorPalette.grey6,
-        color: colorPalette.grey6
-      },
       primary: {
+        backgroundColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.red,
+        textForegroundColor: colorPalette.red,
         borderColor: colorPalette.grey11,
-        borderOverlayColor: colorPalette.red2,
-        color: colorPalette.red2
+        borderHoverColor: colorPalette.red
+      },
+      secondary: {
+        backgroundColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.grey12,
+        textForegroundColor: colorPalette.grey12,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: colorPalette.grey12
+      },
+      success: {
+        backgroundColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.green2,
+        textForegroundColor: colorPalette.green2,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: colorPalette.green2
+      },
+      info: {
+        backgroundColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.blue3,
+        textForegroundColor: colorPalette.blue3,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: colorPalette.blue3
+      },
+      warning: {
+        backgroundColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.yellow3,
+        textForegroundColor: colorPalette.yellow3,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: colorPalette.yellow3
+      },
+      danger: {
+        backgroundColor: "rgba(0,0,0,0)",
+        iconForegroundColor: colorPalette.red1,
+        textForegroundColor: colorPalette.grey7,
+        borderColor: colorPalette.grey11,
+        borderHoverColor: colorPalette.red1
       }
     }
-  },
-  card: {
-    backgroundColor: colorPalette.white,
-    shadowColor: 'rgba(0,0,0,.16)',
-    shadowOffsetX: 0,
-    shadowOffsetY: 4,
-    shadowBlurRadius: 12,
-    shadowSpreadRadius: 0,
-    borderRadius: 10
   }
-});
+};
 
 exports.ButtonCore = ButtonCore;
-exports.darkTheme = darkTheme;
+exports.dark = dark;
 exports.exampleCardCore = exampleCardCore;
 exports.iconCore = iconCore;
-exports.lightTheme = lightTheme;
+exports.light = light;
 exports.statusBarCore = statusBarCore;

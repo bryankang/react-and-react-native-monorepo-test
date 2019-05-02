@@ -1,3 +1,3 @@
 export * from './theme';
-export * from './darkTheme/darkTheme';
-export * from './lightTheme/lightTheme';
+export * from './dark/dark';
+export * from './light/light';

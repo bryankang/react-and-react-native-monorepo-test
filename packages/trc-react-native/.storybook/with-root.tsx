@@ -1,50 +1,44 @@
-import R from 'ramda';
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { select } from '@storybook/addon-knobs';
-import { StatusBar } from '../src/components/status-bar/status-bar';
-import { Theme, lightTheme, darkTheme } from '@trainerroad/trc-core';
-import { ThemeProvider } from '../src/utils/utils';
+import R from "ramda";
+import React from "react";
+import { View, StyleSheet } from "react-native";
+import { radios } from "@storybook/addon-knobs";
+import { StatusBar } from "../src/components/base/status-bar/status-bar";
+import { Theme, light as lightTheme, dark as darkTheme } from "@trainerroad/trc-core";
+import { ThemeProvider, ScreenOrientationProvider } from "../src/utils/utils";
 
-const light = lightTheme;
-const dark = darkTheme;
-
-const themes = [
-  lightTheme,
-  darkTheme,
-];
+const themes = [lightTheme, darkTheme];
 
 const selectOptions = themes.reduce((acc: any, value) => {
-  acc[value.name] = `${value.name}`;
-  return acc;
+    acc[value.name] = `${value.name}`;
+    return acc;
 }, {});
 
+function getRootStyles(args: { theme: Partial<Theme> }) {
+    const backgroundColor: any = R.pathOr(lightTheme.backgroundColor, ["theme", "backgroundColor"], args);
 
-function getRootStyles(args: { theme: Partial<Theme>; }) {
-  const backgroundColor: any = R.pathOr(lightTheme.backgroundColor, ["theme", "backgroundColor"], args);
+    const root = {
+        flex: 1,
+        backgroundColor
+    };
 
-  const root = {
-    flex: 1,
-    backgroundColor,
-  };
-
-  return {
-    root,
-  };
+    return {
+        root
+    };
 }
 
 export function withRoot(storyFn: any): React.ReactElement {
-  const themeName = select('theme', selectOptions, 'light');
-  const theme: any = R.find(R.propEq('name', themeName), themes);
+    const themeName = radios("theme", selectOptions, "dark");
+    const theme: any = R.find(R.propEq("name", themeName), themes);
+    console.log(theme);
 
-  const styles = getRootStyles({ theme });
+    const styles = getRootStyles({ theme });
 
-  return (
-    <ThemeProvider theme={theme}>
-      <StatusBar/>
-      <View style={styles.root}>
-        {storyFn()}
-      </View>
-    </ThemeProvider>
-  )
+    return (
+        <ScreenOrientationProvider>
+            <ThemeProvider theme={theme}>
+                <StatusBar />
+                <View style={styles.root}>{storyFn()}</View>
+            </ThemeProvider>
+        </ScreenOrientationProvider>
+    );
 }

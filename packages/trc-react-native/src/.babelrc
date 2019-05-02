@@ -1,3 +1,8 @@
+/**
+  Separate babel config for building just the components. May need to add
+  more plugins/presets later since the metro preset used to build the app contains
+  many more.
+ */
 {
     "presets": [
       "@babel/preset-env",

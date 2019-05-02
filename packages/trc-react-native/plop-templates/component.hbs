@@ -1,0 +1,30 @@
+import R from "ramda";
+import React, { ReactElement, FC, ReactNode } from "react";
+import { View, ViewStyle, ViewProps, StyleProp } from "react-native";
+import { useTheme } from "../../../utils/utils";
+import { get{{ pascalCase componentName }}Styles } from "./get-{{ kebabCase componentName }}-styles";
+
+export interface {{ pascalCase componentName }}Props extends ViewProps {
+    children?: ReactNode;
+    status?: "default" | "active" | "disabled";
+    style?: StyleProp<ViewStyle>;
+}
+
+export const {{ pascalCase componentName }}: FC<{{ pascalCase componentName }}Props> = ({
+    children,
+    status = "default",
+    style = {},
+    ...rest
+}): ReactElement => {
+    const theme = useTheme();
+    const styles = get{{ pascalCase componentName }}Styles({ theme, status });
+
+    return (
+        <View
+            style={[styles.root, style]}
+            {...rest}
+        >
+            {children}
+        </View>
+    );
+};

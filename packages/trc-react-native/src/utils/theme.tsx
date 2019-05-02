@@ -8,17 +8,11 @@ export interface ThemeProviderProps {
     theme?: Partial<Theme>;
 }
 
-const defaultProps = {
-    children: null,
-    theme: lightTheme,
+export const ThemeProvider: FC<ThemeProviderProps> = ({
+    children = null,
+    theme = lightTheme,
+}): ReactElement => {
+    return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;
 };
-
-const _ThemeProvider: FC<ThemeProviderProps> = (props: any): ReactElement => {
-    return <ThemeContext.Provider value={props.theme}>{props.children}</ThemeContext.Provider>;
-};
-
-_ThemeProvider.defaultProps = defaultProps;
-
-export const ThemeProvider = _ThemeProvider;
 
 export const useTheme = (): Partial<Theme> => useContext(ThemeContext);

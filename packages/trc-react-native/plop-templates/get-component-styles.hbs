@@ -1,0 +1,28 @@
+import R from "ramda";
+import { ViewStyle, StyleProp } from "react-native";
+import { Theme, lightTheme } from "@trainerroad/trc-core";
+import { ToProp } from "react-spring";
+import { {{ pascalCase componentName }}Props } from "./{{ kebabCase componentName }}";
+
+export interface {{ pascalCase componentName }}Styles {
+    root: StyleProp<ViewStyle>;
+}
+
+interface Params {
+    theme: Partial<Theme>;
+    status: NonNullable<{{ pascalCase componentName }}Props["status"]>;
+}
+
+export function get{{ pascalCase componentName }}Styles(params: Params): {{ pascalCase componentName }}Styles {
+    const defaultStyles = lightTheme["{{ kebabCase componentName }}"];
+    const styles = R.pathOr(defaultStyles, ["theme", "{{ kebabCase componentName }}"], params) as Theme["{{ kebabCase componentName }}"];
+    const backgroundColor = R.pathOr(defaultStyles.statuses[params.status], ["statuses", params.status], styles) as keyof Theme["{{ kebabCase componentName }}"]["statuses"];
+
+    const root = {
+        backgroundColor,
+    };
+
+    return {
+        root,
+    };
+}

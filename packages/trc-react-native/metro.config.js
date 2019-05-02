@@ -18,6 +18,7 @@ module.exports = {
             react: path.resolve(__dirname, "node_modules/react"),
             "react-native": path.resolve(__dirname, "node_modules/react-native"),
             "@storybook": path.resolve(__dirname, "node_modules/@storybook"),
+            // "@storybook/addon-info": path.resolve(__dirname, "node_modules/@storybook/addon-info"),
         },
     },
     /**
@@ -26,7 +27,7 @@ module.exports = {
      */
     projectRoot: path.resolve(__dirname),
     watchFolders: [
-        path.resolve(__dirname, "./.storybook"),
+        // path.resolve(__dirname, ".storybook"),
         path.resolve(__dirname, "../trc-core"),
         path.resolve(__dirname, "../../node_modules"),
     ],
