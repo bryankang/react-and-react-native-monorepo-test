@@ -2,16 +2,18 @@ import R from "ramda";
 import React from "react";
 import { View } from "react-native";
 import { storiesOf } from "@storybook/react-native";
-import { select } from "@storybook/addon-knobs";
-import { Text } from "../text/text";
+import { action } from "@storybook/addon-actions";
+import { boolean, text } from "@storybook/addon-knobs";
 import { {{ pascalCase componentName }}, {{ pascalCase componentName }}Props } from "../{{ kebabCase componentName }}/{{ kebabCase componentName }}";
 
-storiesOf("{{ lowerCase componentType }}/{{ pascalCase componentName }}", module)
+storiesOf("{{ kebabCase componentType }}/{{ pascalCase componentName }}", module)
     .add("basic", () => (
-        <{{ pascalCase componentName }}
-            status={select("status", ["default", "active", "disabled"], "default") as {{ pascalCase componentName }}Props["status"]}
-            style=\{{ flex: 1, alignItems: "center", justifyContent: "center" }}
-        >
-            <Text>{{ pascalCase componentName }}</Text>
-        </{{ pascalCase componentName }}>
+        <View style=\{{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+            <{{ pascalCase componentName }}
+                isDisabled={boolean("isDisabled", false) as {{ pascalCase componentName }}Props["isDisabled"]}
+                label={text("label", "Click me!")}
+                onPress={action("onPress")}
+            >
+            </{{ pascalCase componentName }}>
+        </View>
     ));

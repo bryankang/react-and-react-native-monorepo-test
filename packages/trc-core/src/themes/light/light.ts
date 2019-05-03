@@ -45,6 +45,14 @@ export const light: Theme = {
         dropbox: colorPalette.dropbox,
     },
 
+    icon: {
+        status: {
+            active: colorPalette.grey6,
+            default: colorPalette.grey9,
+            disabled: colorPalette.grey7,
+        },
+    },
+
     typography: {
         heading1: {
             fontFamily: primarySansSerifFontFamily,
@@ -343,5 +351,11 @@ export const light: Theme = {
                 borderHoverColor: colorPalette.red1,
             },
         },
-    }
+    },
+
+    textInput: {
+        foregroundColor: colorPalette.grey4,
+        placeholderColor: colorPalette.grey10,
+        iconColor: colorPalette.grey9,
+    },
 }

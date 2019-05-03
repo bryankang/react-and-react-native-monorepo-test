@@ -1,11 +1,12 @@
 import R from "ramda";
-import React, { ReactElement, FC, useState, useCallback } from "react";
+import React, { ReactElement, FC, useState, useCallback, ReactNode } from "react";
 import { Animated, TouchableWithoutFeedback, TouchableWithoutFeedbackProps, ViewStyle, StyleProp, GestureResponderEvent } from "react-native";
 import { useTheme } from "../../../utils/utils";
 import { Button } from "../button/button"
-import { get{{ pascalCase componentName }}Styles } from "./get-{{ kebabCase componentName }}-styles";
+import { getTemplateStyles } from "./get-template-styles";
 
-export interface {{ pascalCase componentName }}Props extends TouchableWithoutFeedbackProps {
+export interface TemplateProps extends TouchableWithoutFeedbackProps {
+    children?: null;
     isDisabled?: boolean;
     label?: string;
     onPressIn?: (e: GestureResponderEvent) => void;
@@ -13,7 +14,7 @@ export interface {{ pascalCase componentName }}Props extends TouchableWithoutFee
     style?: StyleProp<ViewStyle>;
 }
 
-export const {{ pascalCase componentName }}: FC<{{ pascalCase componentName }}Props> = ({
+export const Template: FC<TemplateProps> = ({
     isDisabled = false,
     label = "Click me!",
     onPressIn = () => {},
@@ -24,13 +25,16 @@ export const {{ pascalCase componentName }}: FC<{{ pascalCase componentName }}Pr
     const theme = useTheme();
     const [animationValue] = useState(() => new Animated.Value(0));
 
-    const handlePressIn = useCallback(e => {
+    const setAnimationValue = useCallback(toValue => {
         Animated.spring(animationValue, {
-            toValue: 1,
+            toValue,
             speed: 36,
             useNativeDriver: true,
         }).start();
+    }, []);
 
+    const handlePressIn = useCallback(e => {
+        setAnimationValue(1);
         // When overriding a prop in the root component, always forward it
         onPressIn(e);
     }, []);
@@ -46,7 +50,7 @@ export const {{ pascalCase componentName }}: FC<{{ pascalCase componentName }}Pr
         onPressOut(e);
     }, []);
 
-    const styles = get{{ pascalCase componentName }}Styles({ theme, isDisabled });
+    const styles = getTemplateStyles({ theme, isDisabled });
 
     return (
         <TouchableWithoutFeedback

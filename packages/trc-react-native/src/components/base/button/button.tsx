@@ -1,4 +1,4 @@
-import React, { ReactElement, FC, ReactNode, useState, useCallback } from "react";
+import React, { ReactElement, FC, ReactNode, useState, useCallback, useEffect } from "react";
 import { ViewStyle, ViewProps, TouchableWithoutFeedback, TouchableWithoutFeedbackProps, GestureResponderEvent, StyleProp, Animated } from "react-native";
 import { useTheme } from "../../../utils/utils";
 import { Text } from "../text/text";
@@ -6,15 +6,18 @@ import { Icon, IconProps } from "../icon/icon";
 import { getButtonStyles } from "./get-button-styles";
 
 export interface ButtonProps extends TouchableWithoutFeedbackProps {
-    children?: ReactNode;
     color?: "primary" | "secondary" | "success" | "info" | "warning" | "danger";
     hasIcon?: boolean;
     iconName?: IconProps["name"];
+    isSelected?: boolean;
     isDisabled?: boolean;
     /**
      * Stretch to parent's width
      **/
     isFluid?: boolean;
+    label?: string;
+    onIsSelectedChange?: (e: GestureResponderEvent, isSelected: boolean) => void;
+    onPress?: (e: GestureResponderEvent) => void;
     onPressIn?: (e: GestureResponderEvent) => void;
     onPressOut?: (e: GestureResponderEvent) => void;
     size?: "s" | "m" | "l";
@@ -23,12 +26,15 @@ export interface ButtonProps extends TouchableWithoutFeedbackProps {
 }
 
 export const Button: FC<ButtonProps> = ({
-    children = "Button",
     color = "primary",
     hasIcon = false,
     iconName = "bicycle",
+    isSelected = false,
     isDisabled = false,
     isFluid = false,
+    label = "Button",
+    onIsSelectedChange = () => {},
+    onPress = () => {},
     onPressIn = () => {},
     onPressOut = () => {},
     size = "m",
@@ -39,21 +45,26 @@ export const Button: FC<ButtonProps> = ({
     const theme = useTheme();
     const [animationValue] = useState(() => new Animated.Value(0));
 
-    const handlePressIn = useCallback((e: GestureResponderEvent) => {
+    const setAnimationValue = useCallback((toValue: number) => {
         Animated.timing(animationValue, {
-            toValue: 1,
+            toValue,
             duration: 50,
         }).start();
+    }, []);
+
+    useEffect(() => {
+        setAnimationValue(isSelected ? 1 : 0);
+    }, [isSelected]);
+
+    const handlePressIn = useCallback((e: GestureResponderEvent) => {
+        setAnimationValue(1);
         onPressIn(e);
-    }, [animationValue, onPressIn]);
+    }, []);
 
     const handlePressOut = useCallback((e: GestureResponderEvent) => {
-        Animated.timing(animationValue, {
-            toValue: 0,
-            duration: 50,
-        }).start();
+        setAnimationValue(isSelected ? 1 : 0);
         onPressOut(e);
-    }, [animationValue, onPressOut]);
+    }, []);
 
     const styles = getButtonStyles({
         theme,
@@ -68,6 +79,10 @@ export const Button: FC<ButtonProps> = ({
     return (
         <TouchableWithoutFeedback
             disabled={isDisabled}
+            onPress={e => {
+                onIsSelectedChange(e, !isSelected);
+                onPress(e);
+            }}
             onPressIn={handlePressIn}
             onPressOut={handlePressOut}
             {...rest}
@@ -115,7 +130,7 @@ export const Button: FC<ButtonProps> = ({
                             : "paragraph--semibold"}
                     style={styles.text}
                 >
-                    {children}
+                    {label}
                 </Text>
             </Animated.View>
         </TouchableWithoutFeedback>

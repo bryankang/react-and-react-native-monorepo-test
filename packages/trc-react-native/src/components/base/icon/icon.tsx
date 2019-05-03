@@ -7,17 +7,19 @@ import { getIconStyles } from "./get-icon-styles";
 export interface IconProps extends TextProps {
     name?: IconUnicodeName;
     size?: "xxs" | "xs" | "s" | "m" | "l" | "xl" | "xxl";
+    status?: "active" | "default" | "disabled";
     style?: StyleProp<TextStyle>;
 }
 
 export const Icon: FC<IconProps> = ({
     name = "bicycle",
     size = "m",
+    status = "default",
     style = {},
     ...rest
 }): ReactElement => {
     const theme = useTheme();
-    const iconStyles = getIconStyles({ theme, size });
+    const iconStyles = getIconStyles({ theme, size, status });
 
     return (
         <Animated.Text

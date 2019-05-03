@@ -1011,7 +1011,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@7.4.4", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
+"@babel/runtime@7.4.4", "@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
   integrity sha512-w0+uT71b6Yi7i5SE0co4NioIpSYS6lLiXvCzWzGSKvpK5vdQtCbICHMj+gbAKAOtxiV6HsVh/MBdaF9EQ6faSg==
@@ -11726,14 +11726,6 @@ react-split-pane@^0.1.84:
     prop-types "^15.5.10"
     react-lifecycles-compat "^3.0.4"
     react-style-proptype "^3.0.0"
-
-react-spring@^9.0.0-beta.5:
-  version "9.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-9.0.0-beta.5.tgz#569cdbcac4511e8caef71dd3e82f8cf1e7fd1806"
-  integrity sha512-K+2uYWGg6n3NWXlYbeDPsmLqtIXolEYu/aBEHi6Myq9yH7yNxAGwnDLD/ZgCl6JjrdqVOURd+mERsyTWrRXTTA==
-  dependencies:
-    "@babel/runtime" "^7.3.1"
-    prop-types "^15.5.8"
 
 react-style-proptype@^3.0.0:
   version "3.2.2"

@@ -29,7 +29,6 @@ function getRootStyles(args: { theme: Partial<Theme> }) {
 export function withRoot(storyFn: any): React.ReactElement {
     const themeName = radios("theme", selectOptions, "dark");
     const theme: any = R.find(R.propEq("name", themeName), themes);
-    console.log(theme);
 
     const styles = getRootStyles({ theme });
 

@@ -39,6 +39,14 @@ export interface Theme {
         dropbox: string;
     };
 
+    icon: {
+        status: {
+            active: string;
+            default: string;
+            disabled: string;
+        };
+    };
+
     typography: {
         heading1: {
             fontFamily: string[];
@@ -337,5 +345,11 @@ export interface Theme {
                 borderHoverColor: string;
             };
         };
+    };
+
+    textInput: {
+        foregroundColor: string;
+        placeholderColor: string;
+        iconColor: string;
     };
 }

@@ -8315,6 +8315,13 @@ var dark = {
     trainingPeaks: colorPalette.trainingPeaks,
     dropbox: colorPalette.dropbox
   },
+  icon: {
+    status: {
+      active: colorPalette.grey12,
+      "default": colorPalette.grey9,
+      disabled: colorPalette.grey6
+    }
+  },
   typography: {
     heading1: {
       fontFamily: primarySansSerifFontFamily,
@@ -8612,6 +8619,11 @@ var dark = {
         borderHoverColor: colorPalette.red1
       }
     }
+  },
+  textInput: {
+    foregroundColor: colorPalette.grey12,
+    placeholderColor: colorPalette.grey7,
+    iconColor: colorPalette.grey9
   }
 };
 
@@ -8650,6 +8662,13 @@ var light = {
     garmin: colorPalette.garmin,
     trainingPeaks: colorPalette.trainingPeaks,
     dropbox: colorPalette.dropbox
+  },
+  icon: {
+    status: {
+      active: colorPalette.grey6,
+      "default": colorPalette.grey9,
+      disabled: colorPalette.grey7
+    }
   },
   typography: {
     heading1: {
@@ -8948,6 +8967,11 @@ var light = {
         borderHoverColor: colorPalette.red1
       }
     }
+  },
+  textInput: {
+    foregroundColor: colorPalette.grey4,
+    placeholderColor: colorPalette.grey10,
+    iconColor: colorPalette.grey9
   }
 };
 

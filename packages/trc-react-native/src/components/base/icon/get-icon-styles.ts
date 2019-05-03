@@ -3,31 +3,22 @@ import { TextStyle, StyleProp } from "react-native";
 import { Theme, light as lightTheme } from "@trainerroad/trc-core";
 import { IconProps } from "./icon";
 
-function convertSizeToLength(size: NonNullable<IconProps["size"]>): number {
-    return {
-        xxs: 12,
-        xs: 16,
-        s: 20,
-        m: 24,
-        l: 32,
-        xl: 40,
-        xxl: 56,
-    }[size];
+
+interface Params {
+    theme: Partial<Theme>;
+    size: NonNullable<IconProps["size"]>;
+    status: NonNullable<IconProps["status"]>;
 }
 
 export interface IconStyles {
     root: StyleProp<TextStyle>;
 }
 
-interface Params {
-    theme: Partial<Theme>;
-    size: NonNullable<IconProps["size"]>;
-}
-
 export function getIconStyles(params: Params): IconStyles {
     const root: StyleProp<TextStyle>[] = [];
 
-    const color = R.pathOr(lightTheme.emphases.default, ["theme", "emphases", "default"], params) as Theme["emphases"]["default"];
+    const styles = R.pathOr(lightTheme.icon, ["theme", "icon"], params) as Theme["icon"];
+    const color = styles[params.status];
     const length = convertSizeToLength(params.size);
 
     root.push({
@@ -42,4 +33,16 @@ export function getIconStyles(params: Params): IconStyles {
     return {
         root,
     };
+}
+
+function convertSizeToLength(size: NonNullable<IconProps["size"]>): number {
+    return {
+        xxs: 12,
+        xs: 16,
+        s: 20,
+        m: 24,
+        l: 32,
+        xl: 40,
+        xxl: 56,
+    }[size];
 }

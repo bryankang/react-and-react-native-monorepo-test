@@ -1,27 +1,19 @@
-import React, { ReactElement, FC, useState, useCallback } from "react";
+import React, { ReactElement, FC, useState, useCallback, useEffect } from "react";
 import { Animated, ViewStyle, TouchableWithoutFeedbackProps, TouchableWithoutFeedback, GestureResponderEvent, StyleProp, TextStyle } from "react-native";
 import { useTheme } from "../../../utils/utils";
 import { Icon, IconProps } from "../icon/icon";
 import { Text } from "../text/text";
 import { getIconButtonStyles } from "./get-icon-button-styles";
 
-function getIconSize(size: NonNullable<IconButtonProps["size"]>, label: string): IconProps["size"] {
-    if (!label) {
-        return {
-            s: "xs",
-            m: "s",
-            l: "m",
-        }[size] as IconProps["size"];
-    }
-    return "xs";
-}
-
 export interface IconButtonProps extends TouchableWithoutFeedbackProps {
     children?: undefined | null;
     color?: "primary" | "secondary" | "success" | "info" | "warning" | "danger";
     iconName?: IconProps["name"];
     isDisabled?: boolean;
+    isSelected?: boolean;
     label?: string;
+    onIsSelectedChange?: (e: GestureResponderEvent, isSelected: boolean) => void;
+    onPress?: (e: GestureResponderEvent) => void;
     onPressIn?: (e: GestureResponderEvent) => void;
     onPressOut?: (e: GestureResponderEvent) => void;
     size?: "s" | "m" | "l";
@@ -33,7 +25,10 @@ export const IconButton: FC<IconButtonProps> = ({
     color = "primary",
     iconName = "bicycle",
     isDisabled = false,
+    isSelected = false,
     label = "",
+    onIsSelectedChange = () => {},
+    onPress = () => {},
     onPressIn = () => {},
     onPressOut = () => {},
     size = "m",
@@ -44,21 +39,26 @@ export const IconButton: FC<IconButtonProps> = ({
     const theme = useTheme();
     const [animationValue] = useState(new Animated.Value(0));
 
-    const handlePressIn = useCallback((e: GestureResponderEvent) => {
+    const setAnimationValue = useCallback((toValue: number) => {
         Animated.timing(animationValue, {
-            toValue: 1,
+            toValue,
             duration: 50,
         }).start();
+    }, []);
+
+    useEffect(() => {
+        setAnimationValue(isSelected ? 1 : 0);
+    }, [isSelected]);
+
+    const handlePressIn = useCallback((e: GestureResponderEvent) => {
+        setAnimationValue(1);
         onPressIn(e);
-    }, [animationValue, onPressIn]);
+    }, []);
 
     const handlePressOut = useCallback((e: GestureResponderEvent) => {
-        Animated.timing(animationValue, {
-            toValue: 0,
-            duration: 50,
-        }).start();
+        setAnimationValue(isSelected ? 1 : 0);
         onPressOut(e);
-    }, [animationValue, onPressOut]);
+    }, []);
 
     const styles = getIconButtonStyles({
         theme,
@@ -73,6 +73,10 @@ export const IconButton: FC<IconButtonProps> = ({
     return (
         <TouchableWithoutFeedback
             disabled={isDisabled}
+            onPress={e => {
+                onIsSelectedChange(e, !isSelected);
+                onPress(e);
+            }}
             onPressIn={handlePressIn}
             onPressOut={handlePressOut}
             {...rest}
@@ -131,3 +135,14 @@ export const IconButton: FC<IconButtonProps> = ({
         </TouchableWithoutFeedback>
     );
 };
+
+function getIconSize(size: NonNullable<IconButtonProps["size"]>, label: string): IconProps["size"] {
+    if (!label) {
+        return {
+            s: "xs",
+            m: "s",
+            l: "m",
+        }[size] as IconProps["size"];
+    }
+    return "xs";
+}

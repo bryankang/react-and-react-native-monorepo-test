@@ -3,21 +3,15 @@ import { ViewStyle, TextStyle, StyleProp, StyleSheet } from "react-native";
 import { Theme, light as lightTheme } from "@trainerroad/trc-core";
 import { IconButtonProps } from "./icon-button";
 
-const baseStyles = StyleSheet.create({
-    root: {
-        alignItems: "center",
-        justifyContent: "center",
-        minWidth: 44,
-        height: 44,
-        borderRadius: 2,
-    },
-    icon: {
-        color: lightTheme.button.contained.primary.foregroundColor,
-    },
-    text: {
-        color: lightTheme.button.contained.primary.foregroundColor,
-    },
-})
+interface Params {
+    theme: Partial<Theme>;
+    color: NonNullable<IconButtonProps["color"]>;
+    iconName: Required<IconButtonProps["iconName"]>;
+    isDisabled: Required<IconButtonProps["isDisabled"]>;
+    label: Required<IconButtonProps["label"]>;
+    size: NonNullable<IconButtonProps["size"]>;
+    variant: NonNullable<IconButtonProps["variant"]>;
+}
 
 export interface IconButtonStyles {
     root: StyleProp<ViewStyle>;
@@ -41,15 +35,22 @@ export interface IconButtonStyles {
     };
 }
 
-interface Params {
-    theme: Partial<Theme>;
-    color: NonNullable<IconButtonProps["color"]>;
-    iconName: Required<IconButtonProps["iconName"]>;
-    isDisabled: Required<IconButtonProps["isDisabled"]>;
-    label: Required<IconButtonProps["label"]>;
-    size: NonNullable<IconButtonProps["size"]>;
-    variant: NonNullable<IconButtonProps["variant"]>;
-}
+const baseStyles = StyleSheet.create({
+    root: {
+        alignItems: "center",
+        justifyContent: "center",
+        minWidth: 44,
+        height: 44,
+        borderRadius: 2,
+    },
+    icon: {
+        color: lightTheme.button.contained.primary.foregroundColor,
+    },
+    text: {
+        color: lightTheme.button.contained.primary.foregroundColor,
+        textTransform: "capitalize",
+    },
+});
 
 export function getIconButtonStyles(params: Params): IconButtonStyles {
     const root: StyleProp<ViewStyle> = [baseStyles.root];

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, FC } from "react";
 import { View } from "react-native";
 import { storiesOf } from "@storybook/react-native";
 import { action } from "@storybook/addon-actions";
@@ -33,6 +33,7 @@ storiesOf("base/Button", module)
                         },
                         "primary") as ButtonProps["color"]}
                     size={radios("size", { s: "s", m: "m", l: "l" }, "m") as ButtonProps["size"]}
+                    isSelected={boolean("isSelected", false)}
                     hasIcon={boolean("hasIcon", false)}
                     iconName={select("iconName", iconNames, iconNames[0]) as ButtonProps["iconName"]}
                     isFluid={boolean("isFluid", false)}
@@ -43,4 +44,22 @@ storiesOf("base/Button", module)
                 </Button>
             </View>
         );
-});
+    })
+    .add("dynamic", () => {
+        const DynamicButton: FC = () => {
+            const [isSelected, setIsSelected] = useState(false);
+
+            return (
+                <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+                    <Button
+                        variant="pill"
+                        label={isSelected ? "Selected" : "Deselected"}
+                        isSelected={isSelected}
+                        onIsSelectedChange={(e, value) => setIsSelected(value)}
+                    />
+                </View>
+            )
+        }
+
+        return <DynamicButton />;
+    });

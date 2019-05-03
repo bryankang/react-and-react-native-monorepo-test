@@ -1,14 +1,14 @@
 import R from "ramda";
 import { StyleProp, ViewStyle, TextStyle, StyleSheet } from "react-native";
 import { Theme, light as lightTheme } from "@trainerroad/trc-core";
-import { {{ pascalCase componentName }}Props } from "./{{ kebabCase componentName }}";
+import { TemplateProps } from "./template";
 
 interface Params {
     theme: Partial<Theme>;
-    isDisabled: NonNullable<{{ pascalCase componentName }}Props["isDisabled"]>;
+    isDisabled: NonNullable<TemplateProps["isDisabled"]>;
 }
 
-export interface {{ pascalCase componentName }}Styles {
+export interface TemplateStyles {
     root: StyleProp<ViewStyle>;
     rootAnimationScale: {
         from: number;
@@ -23,9 +23,9 @@ const baseStyles = StyleSheet.create({
     },
 });
 
-export function get{{ pascalCase componentName }}Styles(params: Params): {{ pascalCase componentName }}Styles {
+export function getTemplateStyles(params: Params): TemplateStyles {
     const root: StyleProp<ViewStyle> = [baseStyles.root];
-    const rootAnimationScale = {} as {{ pascalCase componentName }}Styles["rootAnimationScale"];
+    const rootAnimationScale = {} as TemplateStyles["rootAnimationScale"];
 
     const colors = R.pathOr(lightTheme.colors, ["colors"], params.theme) as Theme["colors"];
 

@@ -51,18 +51,20 @@
         "@typescript-eslint/no-useless-constructor": "warn",
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-use-before-define": "off",
         "@typescript-eslint/unified-signatures": "warn",
         "import/first": "warn",
         "import/no-namespace": "warn",
         "import/order": "warn",
         "import/newline-after-import": "warn",
         "import/no-default-export": "warn",
+        "react/display-name": "off",
         "react/prefer-es6-class": [
             "error",
             "never"
         ],
         "react/prop-types": "off",
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "react-hooks/exhaustive-deps": "off"
     }
 }

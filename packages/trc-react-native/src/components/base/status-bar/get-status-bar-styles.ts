@@ -16,8 +16,6 @@ export function getStatusBarStyles(params: Params): StatusBarStyles {
     const isBackgroundDark = statusBarCore.isDark(backgroundColor);
     const color: StatusBarStyle = isBackgroundDark ? "light-content" : "dark-content";
 
-    console.log(backgroundColor)
-
     return {
         color,
     };

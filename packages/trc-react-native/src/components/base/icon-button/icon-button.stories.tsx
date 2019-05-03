@@ -33,6 +33,7 @@ storiesOf("base/IconButton", module)
                         },
                         "primary") as IconButtonProps["color"]}
                     size={radios("size", { s: "s", m: "m", l: "l" }, "m") as IconButtonProps["size"]}
+                    isSelected={boolean("isSelected", false)}
                     iconName={select("iconName", iconNames, iconNames[0])}
                     label={text("label", "")}
                     isDisabled={boolean("isDisabled", false)}
